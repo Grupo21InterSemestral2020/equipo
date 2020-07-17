@@ -27,3 +27,7 @@ class Mouse:
     @tipo.setter
     def tipo(self,otroTipo):
         self.__tipo = otroTipo
+
+    def informacion(self):
+        print(f'Marca:{self.__marca}, Color:{self.__color}, Tipo:{self.__tipo}')
+        
