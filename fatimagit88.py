@@ -1,4 +1,4 @@
-class Mouse
+class Mouse:
 
     def __init__(self,marca,color,tipo):
         self.__marca = marca
@@ -31,3 +31,9 @@ class Mouse
 
     def imprimir(self):
         print(f"mouse: {self.marca}, tipo: {self.tipo}, color: {self.color}")
+
+mouse1 = Mouse("hp","dos botones","negro")
+mouse2 = Mouse("dell","inalambrico","blanco")
+
+mouse1.imprimir
+mouse2.imprimir
