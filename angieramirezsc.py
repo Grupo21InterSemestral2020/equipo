@@ -12,3 +12,21 @@ class Mouse:
     def marca(self,nuevaMarca):
         self.__marca = nuevaMarca
     
+    @property
+    def color(self):
+        return self.__color
+    
+    @color.setter
+    def color(self,nuevoColor):
+        self.__color = nuevoColor
+
+    @property
+    def tipo(self):
+        return self.__tipo
+        
+    @tipo.setter
+    def tipo(self,nuevoTipo):
+        self.__tipo = nuevoTipo
+    
+    def imprimir(self):
+        print(f"marca: {self.__marca},color: {self.__color},tipo: {self.__tipo}")

@@ -27,3 +27,10 @@ class Mouse:
     @tipo.setter
     def tipo(self,valor):
         self.__tipo = valor 
+    
+    @classmethod
+    def imprimirInfo(cls):
+        print(f"la marca del mouse es: {self.__marca}, el color es: {self.__color}, y el tipo: {self.__tipo}")
+
+mouse1 = Mouse("HP","negro","inalambrico")
+mouse2 = Mouse("Microsoft","blanco","clasico")
