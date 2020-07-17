@@ -30,3 +30,9 @@ class Mouse:
 
     def informacion(self):
         print(f'Marca:{self.__marca}, Color:{self.__color}, Tipo:{self.__tipo}')
+
+m1 = Mouse("Dell","negro","inalambrico")
+m2 = Mouse("HP","Gris","optico")
+
+m1.informacion()
+m2.informacion()
