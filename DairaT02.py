@@ -3,3 +3,10 @@ class Mouse:
         self.__marca = marca
         self.__color = color
         self.__tipo = tipo
+
+    @property
+    def marca(self):
+        return self.__marca
+    @marca.setter
+    def marca(self,otraMarca):
+        self.__marca = otraMarca
