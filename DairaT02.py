@@ -12,7 +12,7 @@ class Mouse:
     def marca(self,otraMarca):
         self.__marca = otraMarca
 
-     @property
+    @property
     def color(self):
         return self.__color
     
@@ -20,7 +20,7 @@ class Mouse:
     def color(self,nuevocolor):
         self.__color = nuevocolor
     
-     @property
+    @property
     def tipo(self):
         return self.__tipo
     
@@ -30,4 +30,3 @@ class Mouse:
 
     def informacion(self):
         print(f'Marca:{self.__marca}, Color:{self.__color}, Tipo:{self.__tipo}')
-        
