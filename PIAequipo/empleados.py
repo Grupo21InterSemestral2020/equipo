@@ -4,4 +4,27 @@ class Empleado():
         self.__nombre = nombre
         self.__direccion = direccion
 
+    @property
+    def id(self):
+        return self.__idEmpleado
+
+    @idEmpleado.setter
+    def id(self,idEmp):
+        self.__idEmpleado = idEmp 
+
+    @property
+    def nombreEmp(self):
+        return self.__nombre
+    
+    @nombre.setter
+    def nombreEmp(self,name):
+        self.__nombre = name
+
+    @property
+    def direccionEmp(self):
+        return self.__direccion
+
+    @direccion.setter
+    def direccionEmp(self,dirEmp):
+        self.__direccion = dirEmp
     
