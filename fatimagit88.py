@@ -30,10 +30,16 @@ class Mouse:
         self.__color = nuevocolor
 
     def imprimir(self):
-        print(f"mouse: {self.marca}, tipo: {self.tipo}, color: {self.color}")
+        print(f"mouse: {self.__marca}, tipo: {self.__tipo}, color: {self.__color}")
 
 mouse1 = Mouse("hp","dos botones","negro")
 mouse2 = Mouse("dell","inalambrico","blanco")
 
-mouse1.imprimir
-mouse2.imprimir
+#impresion llamando metodo
+mouse1.imprimir()
+mouse2.imprimir()
+
+#impresion llamando objeto
+print(f"mouse: {mouse1.marca}, tipo: {mouse1.tipo}, color: {mouse1.color}")
+print(f"mouse: {mouse2.marca}, tipo: {mouse2.tipo}, color: {mouse2.color}")
+    
