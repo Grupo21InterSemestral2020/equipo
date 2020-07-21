@@ -1,6 +1,6 @@
 class Empleado():
     def __init__(self,idEmpleado,nombre,direccion):
-        self.__idEmpleado= idEmpleado
+        self.__idEmpleado = idEmpleado
         self.__nombre = nombre
         self.__direccion = direccion
 
@@ -8,7 +8,7 @@ class Empleado():
     def id(self):
         return self.__idEmpleado
 
-    @idEmpleado.setter
+    @id.setter
     def id(self,idEmp):
         self.__idEmpleado = idEmp 
 
@@ -16,7 +16,7 @@ class Empleado():
     def nombreEmp(self):
         return self.__nombre
     
-    @nombre.setter
+    @nombreEmp.setter
     def nombreEmp(self,name):
         self.__nombre = name
 
@@ -24,7 +24,7 @@ class Empleado():
     def direccionEmp(self):
         return self.__direccion
 
-    @direccion.setter
+    @direccionEmp.setter
     def direccionEmp(self,dirEmp):
         self.__direccion = dirEmp
     
