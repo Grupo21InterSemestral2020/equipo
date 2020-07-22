@@ -35,3 +35,14 @@ class Empleado():
         direccion = input("Direccion del empleado:")
         f.write(str(idEmpleado) + "|" + nombre + "|" + direccion + "\n")
         f.close()
+
+    def opciones(self,opc):
+        print(" 1 - Agregar empleado")
+        print(" 2 - Borrar empleado")
+        print(" 3 - Modificar empleado")
+        print(" 4 - Consultar empleado")
+        print(" 5 - Ver detalles de empleado")
+        print(" 6 - Salir")
+        opc = int(input("Seleccione opcion: "))
+        if opc == 1:
+            
