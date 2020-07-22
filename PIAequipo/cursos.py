@@ -16,7 +16,7 @@ class Cursos:
     def administracion(self):
         return self.__administracion
 
-    @administracion.sette
+    @administracion.setter
     def administracion(self,valor):
         self.__administracion = valor
 
@@ -28,10 +28,17 @@ class Cursos:
     def usuario(self,valor):
         self.__usuario = valor
 
-    def imprimirInfo(self):
-        print(f"Id: {self.__IdCurso}")
-        print(f"administracion: {self.__administracion}")
-        print(f"usuario: {self.__usuario}")
+    def imprimirInfo(self,IdCurso,administracion,usuario,f):
+        f = open("./PIAequipo/cursos.txt","a",encoding="utf8")
+        IdCurso = int(input("Ingrese un IdCurso: "))
+        administracion = input("¿Que desea modificar?: ")
+        usuario = input("Ingrese nombre del usuario: ")
+        f.write(str(IdCurso) + "|" + (administracion) + "|" + (usuario) + "\n" )
+        f.close()
+        
+
+
+
         
 
 
