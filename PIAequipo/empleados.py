@@ -45,4 +45,4 @@ class Empleado():
         print(" 6 - Salir")
         opc = int(input("Seleccione opcion: "))
         if opc == 1:
-            addEmpleado()
+            
