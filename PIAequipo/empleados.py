@@ -5,26 +5,33 @@ class Empleado():
         self.__direccion = direccion
 
     @property
-    def id(self):
+    def idEmpleado(self):
         return self.__idEmpleado
 
-    @id.setter
-    def id(self,idEmp):
-        self.__idEmpleado = idEmp 
+    @idEmpleado.setter
+    def id(self,idEmpleado):
+        self.__idEmpleado = idEmpleado 
 
     @property
-    def nombreEmp(self):
+    def nombre(self):
         return self.__nombre
     
-    @nombreEmp.setter
-    def nombreEmp(self,name):
-        self.__nombre = name
+    @nombre.setter
+    def nombre(self,nombre):
+        self.__nombre = nombre
 
     @property
-    def direccionEmp(self):
+    def direccion(self):
         return self.__direccion
 
-    @direccionEmp.setter
-    def direccionEmp(self,dirEmp):
-        self.__direccion = dirEmp
+    @direccion.setter
+    def direccion(self,direccion):
+        self.__direccion = direccion
     
+    def addEmpleado(self,idEmpleado,nombre,direccion,f):
+        f = open("./PIAequipo/empleados.txt","a",encoding="utf8")
+        idEmpleado = int(input("Ingresa id de empleado: "))
+        nombre = input("Ingresa nombre del empleado: ")
+        direccion = input("Direccion del empleado:")
+        f.write(str(idEmpleado) + "|" + nombre + "|" + direccion + "\n")
+        f.close()
