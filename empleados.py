@@ -27,3 +27,11 @@ class Empleado():
     @direccion.setter
     def direccion(self,direccion):
         self.__direccion = direccion
+
+    def addEmpleado(self,idEmpleado,nombre,direccion,f):
+        f = open("./PIAequipo/empleados.txt","a",encoding="utf8")
+        idEmpleado = int(input("Ingresa id de empleado: "))
+        nombre = input("Ingresa nombre del empleado: ")
+        direccion = input("Direccion del empleado:")
+        f.write(str(idEmpleado) + "|" + nombre + "|" + direccion + "\n")
+        f.close()
