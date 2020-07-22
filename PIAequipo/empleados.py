@@ -28,7 +28,7 @@ class Empleado():
     def direccion(self,direccion):
         self.__direccion = direccion
     
-    def addEmpleado(self,idEmpleado,nombre,direccion,f):
+    def agregarEmpleado(self,idEmpleado,nombre,direccion,f):
         f = open("./PIAequipo/empleados.txt","a",encoding="utf8")
         idEmpleado = int(input("Ingresa id de empleado: "))
         nombre = input("Ingresa nombre del empleado: ")
@@ -45,4 +45,58 @@ class Empleado():
         print(" 6 - Salir")
         opc = int(input("Seleccione opcion: "))
         if opc == 1:
+            agregarEmpleado()
+        elif opc == 2:
+            borrarEmpleado()
+        elif opc == 3:
+            modificarEmpleado()
+        elif opc == 4:
+            consultarEmpleado()
+        elif opc == 5:
+            detallesEmpleado()
+        elif opc == 6:
+            salir()
+
+    def borrarEmpleado():
+        archivo = open("./PIAequipo/empleados.txt","r",encoding="utf8")
+        lines = archivo.readlines()
+        archivo.close()
+        archivo = open("./PIAequipo/empleados.txt","w",encoding="utf8")
+        idEmpleado = input("Ingrese Id que desea eliminar: ")
+
+        for line in lines:
+            id = line.split("|")[0]
+            if idEmpleado != id:
+                archivo.write(line)
+        archivo.close()     
+           
+
+    def modificarEmpleado():
+        print("Modificacion de parametros: ")
+        archivo = open("./PIAequipo/empleados.txt","r",encoding="utf8")
+        lines = archivo.readlines()
+        archivo.close()
+        archivo = open("./PIAequipo/empleados.txt","w",encoding="utf8")
+        idEmpleado = input("Ingrese el Id del empleado que desea modificar: ")
+
+        for line in lines:
+            id = line.split("|")[0]
+            if idEmpleado != id:
+                archivo.write(line)
+
+            else:
+                print("Ingrese nuevos datos del empleado: ")
+                idEmpleado = input("Ingrese id: ")
+                nombre = str(input("Ingrese nombre: "))
+                direccion = str(input("Ingrese su direccion: "))
+                archivo.writelines(idEmpleado + "|" + nombre + "|" + direccion + "|" + "\n" )
+
+        archivo.close()         
+    
+
+
+
+    
+
+    
             
