@@ -27,33 +27,7 @@ class Empleado():
     @direccion.setter
     def direccion(self,direccion):
         self.__direccion = direccion
-    
-    def menu (self):
-        print ("\n1. Agregar empleado\n2.Borrar empleado\n3.Modificar empleado\n4. Ver detalles de empleado\n5.Salir")
-        empleados = []
-        while True:
-            opcion = int(input("¿Que accion desea ejecutar:"))
-            if opcion ==1:
-                self.__idEmpleado= self.__idEmpleado+1
-                self.__nombre=input("Ingresa el nombre del empleado: ")
-                self.__direccion=input("Ingresa la direccion del empleado")
-                info =Empleado(self.__idEmpleado,self.__nombre,self.__direccion)
-                empleados.append(info)
-
-
-    def borrarEmpleado(self,id):
-        archivo = open("./PIAequipo/empleados.txt","r",encoding="utf8")
-        lines = archivo.readlines()
-        archivo.close()
-        archivo = open("./PIAequipo/empleados.txt","w",encoding="utf8")
-        idEmpleado = input("Ingrese Id que desea eliminar: ")
-
-        for line in lines:
-            id = line.split("|")[0]
-            if idEmpleado != id:
-                archivo.write(line)
-        archivo.close()     
-           
+        
 
     def modificarEmpleado():
         print("Modificacion de parametros: ")
@@ -111,3 +85,10 @@ class Empleado():
                 self.__direccion=input("Direccion del empleado")
                 datos=Empleado(self.__idEmpleado,self.__nombre,self.__direccion)
                 empleados.append(datos)
+
+            elif accion ==2:
+                clave=int(input("Ingrese id del empleado a eliminar: "))
+                for remover in empleados:
+                    if remover.idEmpleado == clave:
+                        empleados.remove(Empleado(clave,None,None))
+                        input("Registro borrado")
