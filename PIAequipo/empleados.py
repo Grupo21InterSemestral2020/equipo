@@ -28,13 +28,17 @@ class Empleado():
     def direccion(self,direccion):
         self.__direccion = direccion
     
-    def agregarEmpleado(self,idEmpleado,nombre,direccion,f):
-        f = open("./PIAequipo/empleados.txt","a",encoding="utf8")
-        idEmpleado = int(input("Ingresa id de empleado: "))
-        nombre = input("Ingresa nombre del empleado: ")
-        direccion = input("Direccion del empleado:")
-        f.write(str(idEmpleado) + "|" + nombre + "|" + direccion + "\n")
-        f.close()
+    def menu (self):
+        print ("\n1. Agregar empleado\n2.Borrar empleado\n3.Modificar empleado\n4. Ver detalles de empleado\n5.Salir")
+        empleados = []
+        while True:
+            opcion = int(input("¿Que accion desea ejecutar:"))
+            if opcion ==1:
+                self.__idEmpleado= self.__idEmpleado+1
+                self.__nombre=input("Ingresa el nombre del empleado: ")
+                self.__direccion=input("Ingresa la direccion del empleado")
+                info =Empleado(self.__idEmpleado,self.__nombre,self.__direccion)
+                empleados.append(info)
 
 
     def borrarEmpleado(self,id):
