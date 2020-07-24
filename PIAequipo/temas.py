@@ -20,7 +20,7 @@ class Tema:
         self.__nombre = nombre
 
     def opciones(self):
-        temas = []
+        tema = []
         while True:
             print ("""
             1.- Agregar tema
@@ -36,6 +36,5 @@ class Tema:
                 self.__nombre=input("Nombre del tema: ")
                 f.write(str(self.__idTema) + "|" + self.__nombre + "\n")
                 f.close()
-            else:
-                pass
-
+                print("Tema agregado.")
+                break
