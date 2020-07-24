@@ -103,8 +103,6 @@ class Empleado():
                 self.__direccion=input("Direccion del empleado")
                 f.write(str(self.__idEmpleado) + "|" + self.__nombre + "|" + self.__direccion + "\n")
                 f.close()
-                datos=Empleado(self.__idEmpleado,self.__nombre,self.__direccion)
-                empleados.append(datos)
 
             elif accion ==2:
                 clave=int(input("Ingrese id del empleado a eliminar: "))
