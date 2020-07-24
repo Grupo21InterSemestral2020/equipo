@@ -37,7 +37,7 @@ class Empleado():
         f.close()
 
 
-    def borrarEmpleado():
+    def borrarEmpleado(self,id):
         archivo = open("./PIAequipo/empleados.txt","r",encoding="utf8")
         lines = archivo.readlines()
         archivo.close()
@@ -80,7 +80,7 @@ class Empleado():
         archivo.close()
     
     def verDetalles(self,id):
-        archivo = open("./PIAequipo/empleados.txt","r",encoding="utf8")
+        archivo = open("./archi/empleados.txt","r",encoding="utf8")
         lines = archivo.readlines()
         id_detalles = input("Ingrese id del empleado: ")
 
@@ -108,7 +108,7 @@ class Empleado():
         elif opc == 4:
             consultarEmpleado()
         elif opc == 5:
-            detallesEmpleado()
+            verDetalles()
         elif opc == 6:
             salir()   
     
