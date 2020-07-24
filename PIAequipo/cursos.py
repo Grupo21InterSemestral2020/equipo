@@ -1,8 +1,14 @@
+def limpiar_pantalla():
+    if name == "nt":
+        system("cls")
+    else:
+        system("clear")
+
 class Cursos:
-    def __init__(self,IdCurso,administracion,usuario):
+    def __init__(self,IdCurso,descripcion,IdEmpleado):
         self.__IdCurso = IdCurso
-        self.__administracion = administracion
-        self.__usuario = usuario
+        self.__descripcion = descripcion
+        self.__IdEmpleado = IdEmpleado
 
     @property
     def IdCurso(self):
@@ -13,28 +19,34 @@ class Cursos:
         self.__IdCurso = valor
 
     @property
-    def administracion(self):
-        return self.__administracion
+    def descripcion(self):
+        return self.__descripcion
 
-    @administracion.setter
-    def administracion(self,valor):
-        self.__administracion = valor
+    @descripcion.setter
+    def descripcion(self,valor):
+        self.__descripcion = valor
 
     @property
-    def usuario(self):
-        return self.__usuario
+    def IdEmpleado(self):
+        return self.__IdEmpleado
 
-    @usuario.setter
-    def usuario(self,valor):
-        self.__usuario = valor
+    @IdEmpleado.setter
+    def IdEmpleado(self,valor):
+        self.__IdEmpleado = valor
+
+    def __eq__(self,codigo):
+       return self.__IdEmpleado = codigo
+
+    def minimenu(self):
+        limpiar_pantalla()
+        lista =[]
+
+        while true:
+            try:
+
 
     def imprimirInfo(self,IdCurso,administracion,usuario,f):
-        f = open("./PIAequipo/cursos.txt","a",encoding="utf8")
-        IdCurso = int(input("Ingrese un IdCurso: "))
-        administracion = input("¿Que desea modificar?: ")
-        usuario = input("Ingrese nombre del usuario: ")
-        f.write(str(IdCurso) + "|" + (administracion) + "|" + (usuario) + "\n" )
-        f.close()
+        
         
 
 
