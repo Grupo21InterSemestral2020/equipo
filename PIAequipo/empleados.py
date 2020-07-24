@@ -27,37 +27,9 @@ class Empleado():
     @direccion.setter
     def direccion(self,direccion):
         self.__direccion = direccion
-    
-    def agregarEmpleado(self,idEmpleado,nombre,direccion,f):
-        f = open("./PIAequipo/empleados.txt","a",encoding="utf8")
-        idEmpleado = int(input("Ingresa id de empleado: "))
-        nombre = input("Ingresa nombre del empleado: ")
-        direccion = input("Direccion del empleado:")
-        f.write(str(idEmpleado) + "|" + nombre + "|" + direccion + "\n")
-        f.close()
+<<<<<<< HEAD
 
-    def opciones(self,opc):
-        print(" 1 - Agregar empleado")
-        print(" 2 - Borrar empleado")
-        print(" 3 - Modificar empleado")
-        print(" 4 - Consultar empleado")
-        print(" 5 - Ver detalles de empleado")
-        print(" 6 - Salir")
-        opc = int(input("Seleccione opcion: "))
-        if opc == 1:
-            agregarEmpleado()
-        elif opc == 2:
-            borrarEmpleado()
-        elif opc == 3:
-            modificarEmpleado()
-        elif opc == 4:
-            consultarEmpleado()
-        elif opc == 5:
-            detallesEmpleado()
-        elif opc == 6:
-            salir()
-
-    def borrarEmpleado():
+    def borrarEmpleado(self,id):
         archivo = open("./PIAequipo/empleados.txt","r",encoding="utf8")
         lines = archivo.readlines()
         archivo.close()
@@ -70,6 +42,9 @@ class Empleado():
                 archivo.write(line)
         archivo.close()     
            
+=======
+        
+>>>>>>> 245a0dc19294a91bfda3bac9a17fe06fca460a85
 
     def modificarEmpleado():
         print("Modificacion de parametros: ")
@@ -91,18 +66,48 @@ class Empleado():
                 direccion = str(input("Ingrese su direccion: "))
                 archivo.writelines(idEmpleado + "|" + nombre + "|" + direccion + "|" + "\n" )
 
+        archivo.close()      
+        
     def consultarEmpleado():
         print("Ingresa el Id del empleado que desea consultar: ")
         archivo = open("./PIAequipo/empleados.txt","r",encoding="utf8")
         lines = archivo.readlines()
         archivo.close()
+    
+    def verDetalles(self,id):
+        archivo = open("./archi/empleados.txt","r",encoding="utf8")
+        lines = archivo.readlines()
+        id_detalles = input("Ingrese id del empleado: ")
+
+        for line in lines:
+            id = line.split('|')[0]
+            if id_detalles == id:
+                print (line)
+        archivo.close()
         
-         
-    
+    def opciones(self):
+        empleados = []
+        while True:
+            print ("""
+            1.-Agregar empleado
+            2.- Borrar empleado
+            3.- Modificar empleado
+            4.- Ver detalles de empleado
+            5.-Salir""")
 
+            opc= int(input("Elija una opcion: "))
+            if opc ==1:
+                f = open("./PIAequipo/empleados.txt","a",encoding="utf8")
+                self.__idEmpleado= self.__idEmpleado+1
+                self.__nombre=input("Nombre del empleado: ")
+                self.__direccion=input("Direccion del empleado")
+                f.write(str(self.__idEmpleado) + "|" + self.__nombre + "|" + self.__direccion + "\n")
+                f.close()
 
+            elif accion ==2:
+                clave=int(input("Ingrese id del empleado a eliminar: "))
+                for remover in empleados:
+                    if remover.idEmpleado == clave:
+                        empleados.remove(Empleado(clave,None,None))
+                        input("Registro borrado")
 
-    
-
-    
-            
