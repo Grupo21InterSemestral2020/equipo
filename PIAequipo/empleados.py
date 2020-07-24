@@ -92,13 +92,12 @@ class Empleado():
                 archivo.writelines(idEmpleado + "|" + nombre + "|" + direccion + "|" + "\n" )
 
     def consultarEmpleado():
-        print("Numero de empleado: ")
+        print("Ingresa el Id del empleado que desea consultar: ")
         archivo = open("./PIAequipo/empleados.txt","r",encoding="utf8")
         lines = archivo.readlines()
         archivo.close()
-        archivo = open("./PIAequipo/empleados.txt","w",encoding="utf8")
-        idEmpleado = input("Ingrese el Id del empleado que desea consultar: ")
-        archivo.close()         
+        
+         
     
 
 
