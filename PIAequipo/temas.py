@@ -18,3 +18,24 @@ class Tema:
     @nombre.setter
     def nombre(self,nombre):
         self.__nombre = nombre
+
+    def opciones(self):
+        temas = []
+        while True:
+            print ("""
+            1.- Agregar tema
+            2.- Borrar tema
+            3.- Modificar tema
+            4.- Ver detalles del tema
+            5.- Salir""")
+
+            opc= int(input("Elija una opcion: "))
+            if opc == 1:
+                f = open("./PIAequipo/temas.txt","a",encoding="utf8")
+                self.__idTema= self.__idTema+1
+                self.__nombre=input("Nombre del tema: ")
+                f.write(str(self.__idTema) + "|" + self.__nombre + "\n")
+                f.close()
+            else:
+                pass
+
