@@ -27,15 +27,6 @@ class Empleado():
     @direccion.setter
     def direccion(self,direccion):
         self.__direccion = direccion
-    
-    def agregarEmpleado(self,idEmpleado,nombre,direccion,f):
-        f = open("./PIAequipo/empleados.txt","a",encoding="utf8")
-        idEmpleado = int(input("Ingresa id de empleado: "))
-        nombre = input("Ingresa nombre del empleado: ")
-        direccion = input("Direccion del empleado:")
-        f.write(str(idEmpleado) + "|" + nombre + "|" + direccion + "\n")
-        f.close()
-
 
     def borrarEmpleado(self,id):
         archivo = open("./PIAequipo/empleados.txt","r",encoding="utf8")
@@ -100,10 +91,11 @@ class Empleado():
             4.- Ver detalles de empleado
             5.-Salir""")
 
-            accion= int(input("Elija una opcion: "))
-            if accion ==1:
+            opc= int(input("Elija una opcion: "))
+            if opc ==1:
+                f = open("./PIAequipo/empleados.txt","a",encoding="utf8")
                 self.__idEmpleado= self.__idEmpleado+1
                 self.__nombre=input("Nombre del empleado: ")
                 self.__direccion=input("Direccion del empleado")
-                datos=Empleado(self.__idEmpleado,self.__nombre,self.__direccion)
-                empleados.append(datos)
+                f.write(str(self.__idEmpleado) + "|" + self.__nombre + "|" + self.__direccion + "\n")
+                f.close()
