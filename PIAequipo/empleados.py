@@ -37,7 +37,7 @@ class Empleado():
         f.close()
 
 
-    def borrarEmpleado():
+    def borrarEmpleado(self,id):
         archivo = open("./PIAequipo/empleados.txt","r",encoding="utf8")
         lines = archivo.readlines()
         archivo.close()
@@ -78,8 +78,18 @@ class Empleado():
         archivo = open("./PIAequipo/empleados.txt","r",encoding="utf8")
         lines = archivo.readlines()
         archivo.close()
-        
     
+    def verDetalles(self,id):
+        archivo = open("./archi/empleados.txt","r",encoding="utf8")
+        lines = archivo.readlines()
+        id_detalles = input("Ingrese id del empleado: ")
+
+        for line in lines:
+            id = line.split('|')[0]
+            if id_detalles == id:
+                print (line)
+        archivo.close()
+        
     def opciones(self):
         empleados = []
         while True:
