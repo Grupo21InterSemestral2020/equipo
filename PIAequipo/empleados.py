@@ -107,3 +107,4 @@ class Empleado():
                 self.__direccion=input("Direccion del empleado")
                 datos=Empleado(self.__idEmpleado,self.__nombre,self.__direccion)
                 empleados.append(datos)
+
