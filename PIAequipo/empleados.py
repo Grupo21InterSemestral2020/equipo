@@ -36,26 +36,6 @@ class Empleado():
         f.write(str(idEmpleado) + "|" + nombre + "|" + direccion + "\n")
         f.close()
 
-    def opciones(self,opc):
-        print(" 1 - Agregar empleado")
-        print(" 2 - Borrar empleado")
-        print(" 3 - Modificar empleado")
-        print(" 4 - Consultar empleado")
-        print(" 5 - Ver detalles de empleado")
-        print(" 6 - Salir")
-        opc = int(input("Seleccione opcion: "))
-        if opc == 1:
-            agregarEmpleado()
-        elif opc == 2:
-            borrarEmpleado()
-        elif opc == 3:
-            modificarEmpleado()
-        elif opc == 4:
-            consultarEmpleado()
-        elif opc == 5:
-            detallesEmpleado()
-        elif opc == 6:
-            salir()
 
     def borrarEmpleado():
         archivo = open("./PIAequipo/empleados.txt","r",encoding="utf8")
@@ -91,7 +71,28 @@ class Empleado():
                 direccion = str(input("Ingrese su direccion: "))
                 archivo.writelines(idEmpleado + "|" + nombre + "|" + direccion + "|" + "\n" )
 
-        archivo.close()         
+        archivo.close()      
+        
+    def opciones(self,opc):
+        print(" 1 - Agregar empleado")
+        print(" 2 - Borrar empleado")
+        print(" 3 - Modificar empleado")
+        print(" 4 - Consultar empleado")
+        print(" 5 - Ver detalles de empleado")
+        print(" 6 - Salir")
+        opc = int(input("Seleccione opcion: "))
+        if opc == 1:
+            agregarEmpleado()
+        elif opc == 2:
+            borrarEmpleado()
+        elif opc == 3:
+            modificarEmpleado()
+        elif opc == 4:
+            consultarEmpleado()
+        elif opc == 5:
+            detallesEmpleado()
+        elif opc == 6:
+            salir()   
     
 
 
