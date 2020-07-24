@@ -27,6 +27,15 @@ class Empleado():
     @direccion.setter
     def direccion(self,direccion):
         self.__direccion = direccion
+    
+    def agregarEmpleado(self,idEmpleado,nombre,direccion,f):
+        f = open("./PIAequipo/empleados.txt","a",encoding="utf8")
+        idEmpleado = int(input("Ingresa id de empleado: "))
+        nombre = input("Ingresa nombre del empleado: ")
+        direccion = input("Direccion del empleado:")
+        f.write(str(idEmpleado) + "|" + nombre + "|" + direccion + "\n")
+        f.close()
+
 
     def borrarEmpleado(self,id):
         archivo = open("./PIAequipo/empleados.txt","r",encoding="utf8")
@@ -41,7 +50,6 @@ class Empleado():
                 archivo.write(line)
         archivo.close()     
            
-        
 
     def modificarEmpleado():
         print("Modificacion de parametros: ")
@@ -92,19 +100,45 @@ class Empleado():
             4.- Ver detalles de empleado
             5.-Salir""")
 
-            opc= int(input("Elija una opcion: "))
-            if opc ==1:
-                f = open("./PIAequipo/empleados.txt","a",encoding="utf8")
+            accion= int(input("Elija una opcion: "))
+            if accion ==1:
                 self.__idEmpleado= self.__idEmpleado+1
                 self.__nombre=input("Nombre del empleado: ")
                 self.__direccion=input("Direccion del empleado")
-                f.write(str(self.__idEmpleado) + "|" + self.__nombre + "|" + self.__direccion + "\n")
-                f.close()
+                datos=Empleado(self.__idEmpleado,self.__nombre,self.__direccion)
+                empleados.append(datos)
 
-            elif opc ==2:
-                clave=int(input("Ingrese id del empleado a eliminar: "))
-                for remover in empleados:
-                    if remover.idEmpleado == clave:
-                        empleados.remove(Empleado(clave,None,None))
-                        input("Registro eliminado")
 
+
+while True:
+    print("1.-Agregar empleado")
+    print("2.-Borrar ")
+    print("3.-Modificar")
+    print("4.-Consultar")
+    print("5.-Ver todos  ")
+    print("6.-Salir")
+    opcion = int(input("Que opcion eliges?"))
+
+    if opcion == 1:
+        print("Agregar empleado")
+        break
+
+    elif opcion == 2:
+        print("Borrar")   
+        break
+
+    elif opcion == 3:
+        print("Modificar")   
+        break
+
+    elif opcion == 4:
+        print("Consultar")   
+        break    
+
+    elif opcion == 5:
+        print("Ver todos")
+        break   
+         
+    elif opcion == 6:
+        print("Salir")   
+        break
