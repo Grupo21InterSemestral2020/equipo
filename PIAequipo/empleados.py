@@ -27,29 +27,7 @@ class Empleado():
     @direccion.setter
     def direccion(self,direccion):
         self.__direccion = direccion
-    
-    def agregarEmpleado(self,idEmpleado,nombre,direccion,f):
-        f = open("./PIAequipo/empleados.txt","a",encoding="utf8")
-        idEmpleado = int(input("Ingresa id de empleado: "))
-        nombre = input("Ingresa nombre del empleado: ")
-        direccion = input("Direccion del empleado:")
-        f.write(str(idEmpleado) + "|" + nombre + "|" + direccion + "\n")
-        f.close()
-
-
-    def borrarEmpleado(self,id):
-        archivo = open("./PIAequipo/empleados.txt","r",encoding="utf8")
-        lines = archivo.readlines()
-        archivo.close()
-        archivo = open("./PIAequipo/empleados.txt","w",encoding="utf8")
-        idEmpleado = input("Ingrese Id que desea eliminar: ")
-
-        for line in lines:
-            id = line.split("|")[0]
-            if idEmpleado != id:
-                archivo.write(line)
-        archivo.close()     
-           
+        
 
     def modificarEmpleado():
         print("Modificacion de parametros: ")
@@ -108,3 +86,12 @@ class Empleado():
                 datos=Empleado(self.__idEmpleado,self.__nombre,self.__direccion)
                 empleados.append(datos)
 
+<<<<<<< HEAD
+=======
+            elif accion ==2:
+                clave=int(input("Ingrese id del empleado a eliminar: "))
+                for remover in empleados:
+                    if remover.idEmpleado == clave:
+                        empleados.remove(Empleado(clave,None,None))
+                        input("Registro borrado")
+>>>>>>> 8d8a3be50091cc86a334b36fb1b9339cae477563
