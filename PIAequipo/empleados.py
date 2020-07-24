@@ -94,32 +94,20 @@ class Empleado():
                 print (line)
         archivo.close()
         
-    
-    def opciones(self,opc):
-        print(" 1 - Agregar empleado")
-        print(" 2 - Borrar empleado")
-        print(" 3 - Modificar empleado")
-        print(" 4 - Consultar empleado")
-        print(" 5 - Ver detalles de empleado")
-        print(" 6 - Salir")
-        opc = int(input("Seleccione opcion: "))
-        if opc == 1:
-            agregarEmpleado()
-        elif opc == 2:
-            borrarEmpleado()
-        elif opc == 3:
-            modificarEmpleado()
-        elif opc == 4:
-            consultarEmpleado()
-        elif opc == 5:
-            verDetalles()
-        elif opc == 6:
-            salir()   
-    
+    def opciones(self):
+        empleados = []
+        while True:
+            print ("""
+            1.-Agregar empleado
+            2.- Borrar empleado
+            3.- Modificar empleado
+            4.- Ver detalles de empleado
+            5.-Salir""")
 
-
-
-    
-
-    
-            
+            accion= int(input("Elija una opcion: "))
+            if accion ==1:
+                self.__idEmpleado= self.__idEmpleado+1
+                self.__nombre=input("Nombre del empleado: ")
+                self.__direccion=input("Direccion del empleado")
+                datos=Empleado(self.__idEmpleado,self.__nombre,self.__direccion)
+                empleados.append(datos)
