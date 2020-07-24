@@ -73,6 +73,13 @@ class Empleado():
 
         archivo.close()      
         
+    def consultarEmpleado():
+        print("Ingresa el Id del empleado que desea consultar: ")
+        archivo = open("./PIAequipo/empleados.txt","r",encoding="utf8")
+        lines = archivo.readlines()
+        archivo.close()
+        
+    
     def opciones(self,opc):
         print(" 1 - Agregar empleado")
         print(" 2 - Borrar empleado")
