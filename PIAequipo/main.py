@@ -28,5 +28,5 @@ elif opcion ==1:
     valor.minimenu()
 
 elif opcion ==2:
-    valor = curso(o,None,None)
+    valor = cursos(0,None,None)
     valor.minimenu()
