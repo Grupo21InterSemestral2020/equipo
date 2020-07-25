@@ -46,6 +46,8 @@ class Empleado():
                 self.__idEmpleado= self.__idEmpleado+1
                 self.__nombre=input("Ingresa el nombre del empleado: ")
                 self.__direccion=input("Ingresa la direccion del empleado")
+                info = Empleado(self.__idEmpleado,self.__nombre,self.__direccion)
+                empleados.append(info)
                 print("Empleado agregado.")
 
             elif opcion ==2:
