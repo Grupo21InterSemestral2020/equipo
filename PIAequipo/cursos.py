@@ -124,7 +124,7 @@ class Cursos:
                     input("Numero no valido, favor de registrar numero valido...")
                     limpiar_pantalla()
                     def Informacion():
-                        archivo = open("./PIAequipo/cursos.txt","w")
+                        archivo = open("./PIAequipo/cursos.txt","w",encoding='utf8')
                         for i6 in lista:
                             archivo.write(str(f"IdCurso: {i6.IdCurso}, descripcion: {i6.descripcion}, IdEmpleado: {i6.IdEmpleado}""\n"))
                         archivo.close()
