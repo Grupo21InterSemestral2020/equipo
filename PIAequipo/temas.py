@@ -37,4 +37,9 @@ class Tema:
                 f.write(str(self.__idTema) + "|" + self.__nombre + "\n")
                 f.close()
                 print("Tema agregado.")
-                break
+
+
+
+
+valor = Tema(1,None)
+valor.opciones()
