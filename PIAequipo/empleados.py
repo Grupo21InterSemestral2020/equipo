@@ -28,28 +28,35 @@ class Empleado():
     def direccion(self,direccion):
         self.__direccion = direccion
     
-    def agregarEmpleado(self,idEmpleado,nombre,direccion,f):
-        f = open("./PIAequipo/empleados.txt","a",encoding="utf8")
-        idEmpleado = int(input("Ingresa id de empleado: "))
-        nombre = input("Ingresa nombre del empleado: ")
-        direccion = input("Direccion del empleado:")
-        f.write(str(idEmpleado) + "|" + nombre + "|" + direccion + "\n")
-        f.close()
-
-
-    def borrarEmpleado(self,id):
-        archivo = open("./PIAequipo/empleados.txt","r",encoding="utf8")
-        lines = archivo.readlines()
-        archivo.close()
-        archivo = open("./PIAequipo/empleados.txt","w",encoding="utf8")
-        idEmpleado = input("Ingrese Id que desea eliminar: ")
-
-        for line in lines:
-            id = line.split("|")[0]
-            if idEmpleado != id:
-                archivo.write(line)
-        archivo.close()     
-           
+    def opciones(self):
+        empleados = []
+        while True:
+            print ("""
+            1.- Agregar empleado
+            2.- Borrar empleado
+            3.- Modificar empleado
+            4.- Ver detalles de empleado
+            5.- Salir""")
+            opc = int(input("Elija una opcion: "))
+            if opc == 1:
+                f = open("./PIAequipo/empleados.txt","a",encoding="utf8")
+                idEmpleado = int(input("Ingresa id de empleado: "))
+                nombre = input("Ingresa nombre del empleado: ")
+                direccion = input("Direccion del empleado:")
+                f.write(str(idEmpleado) + "|" + nombre + "|" + direccion + "\n")
+                f.close()
+            
+            elif opc == 2:
+                f = open("./PIAequipo/empleados.txt","r",encoding="utf8")
+                if empleados = []:
+                    input("Vacío. ")
+                else:
+                    id = int(input("ID a borrar: "))
+                    for remover in empleados:
+                        if remover.idEmpleado == id:
+                            empleados.remove(Empleado(id,None,None))
+                            input("Eliminado. ")
+                            f.close()
 
     def modificarEmpleado():
         print("Modificacion de parametros: ")
