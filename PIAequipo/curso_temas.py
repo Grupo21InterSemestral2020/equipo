@@ -52,6 +52,19 @@ class Curso_Tema:
                     else:
                         clave=int(input("Clave:"))
                     for remover in lista:
-                        if remover.ict == clave:
+                        if remover.idct == clave:
                             lista.remove(Curso_Tema(clave,None,None))
                             input("Registro borrado")
+                elif opcion==3:
+                    print(f"\n{'idCursoTema':<30}{'idCurso':<30}{'idTema':<30}")
+                    for i2 in lista:
+                        print(f"{i2.idct:<30}{i2.idc:<30}{i2.idt:<30}")
+                    clave=int(input("Ingresa la clave:"))
+                    if lista==[]:
+                        print("Registro vacio")
+                    else:
+                        for remover in lista:
+                            if remover.ict==clave:
+                                remover.ic=int(input("Ingresa el curso nuevo: "))
+                                remover.it=int(input("Ingresa el tema nuevo: "))
+                                input("Registro Actualizado")
