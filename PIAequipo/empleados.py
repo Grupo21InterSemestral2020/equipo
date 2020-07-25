@@ -70,7 +70,7 @@ class Empleado():
                         if remover.idEmpleado == clave:
                             remover.nombre = input("Ingrese nuevo nombre: ")
                             remover.direccion = input("Ingrese nueva direccion: ")
-                            input("Regirstb  ro actualizado correctamente...")
+                            input("Registro actualizado correctamente.")
 
             elif opcion == 4:
                 #print("Ingresa el Id del empleado que desea consultar: ")
