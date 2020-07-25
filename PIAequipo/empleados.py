@@ -33,6 +33,7 @@ class Empleado():
 
         empleados = []
         while True:
+            print(f"{'BIENVENIDO AL MENU EMPLEADOS':^20}")
             print ("""
             1. Agregar empleado
             2. Borrar empleado
@@ -46,6 +47,8 @@ class Empleado():
                 self.__idEmpleado= self.__idEmpleado+1
                 self.__nombre=input("Ingresa el nombre del empleado: ")
                 self.__direccion=input("Ingresa la direccion del empleado")
+                info = Empleado(self.__idEmpleado,self.__nombre,self.__direccion)
+                empleados.append(info)
                 print("Empleado agregado.")
 
             elif opcion ==2:
@@ -68,7 +71,7 @@ class Empleado():
                         if remover.idEmpleado == clave:
                             remover.nombre = input("Ingrese nuevo nombre: ")
                             remover.direccion = input("Ingrese nueva direccion: ")
-                            input("Regirstb  ro actualizado correctamente...")
+                            input("Registro actualizado correctamente.")
 
             elif opcion == 4:
                 #print("Ingresa el Id del empleado que desea consultar: ")
