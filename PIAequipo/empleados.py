@@ -73,16 +73,18 @@ class Empleado():
 
         archivo.close()      
         
-    def consultarEmpleado():
-        print("Ingresa el Id del empleado que desea consultar: ")
-        archivo = open("./PIAequipo/empleados.txt","r",encoding="utf8")
+    def consultarEmpleado(self):
+        #print("Ingresa el Id del empleado que desea consultar: ")
+        archivo = open("../PIAequipo/empleados.txt","r",encoding="utf8")
         lines = archivo.readlines()
+        for line in lines:
+                print (line)
         archivo.close()
     
-    def verDetalles(self,id):
-        archivo = open("./archi/empleados.txt","r",encoding="utf8")
-        lines = archivo.readlines()
+    def verDetalles(self):
+        archivo = open("../PIAequipo/empleados.txt","r",encoding="utf8")  
         id_detalles = input("Ingrese id del empleado: ")
+        lines = archivo.readlines()
 
         for line in lines:
             id = line.split('|')[0]
@@ -109,7 +111,7 @@ class Empleado():
                 empleados.append(datos)
 
 
-
+empleado = Empleado("0","dummy","calle sin numero")
 while True:
     print("1.-Agregar empleado")
     print("2.-Borrar ")
@@ -133,11 +135,13 @@ while True:
 
     elif opcion == 4:
         print("Consultar")   
+        empleado.verDetalles()
         break    
 
     elif opcion == 5:
         print("Ver todos")
-        break   
+        empleado.consultarEmpleado()
+        break  
          
     elif opcion == 6:
         print("Salir")   
