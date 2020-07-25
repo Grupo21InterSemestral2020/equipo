@@ -47,9 +47,11 @@ class Empleado():
                 self.__idEmpleado= self.__idEmpleado+1
                 self.__nombre=input("Ingresa el nombre del empleado: ")
                 self.__direccion=input("Ingresa la direccion del empleado")
-                f.write(self.__idEmpleado,self.__nombre,self.__direccion)
-                f.closed()
-
+                f.write(str(self.__idTema) + "|" + self.__nombre + "\n")
+                f.close()
+                print("Tema agregado.")
+                break
+            
             elif opcion ==2:
                 if empleados==[]:
                     input("Actualmente vacia")
