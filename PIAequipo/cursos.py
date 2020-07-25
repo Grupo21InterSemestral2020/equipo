@@ -42,7 +42,7 @@ class Cursos:
                     limpiar_pantalla()
                     input("Por favor introduzca numero correcto...")
 
-                elif opcion ==1:
+                elif opcion == 1:
                     limpiar_pantalla()
                     self.__descripcion = int(input("Ingrese la descripcion: "))
                     self.__IdEmpleado = int(input("Ingrese Id del empleado: "))
@@ -53,7 +53,7 @@ class Cursos:
                     input("Registro agregado...")
                     limpiar_pantalla()
 
-                elif opcion ==2:
+                elif opcion == 2:
                     limpiar_pantalla()
                     print(f"\n{i1.IdCurso:<30}{i1.descripcion:<30}{i1.IdEmpleado:<30}")
                     for i1 in lista:
@@ -91,13 +91,51 @@ class Cursos:
                                     print("Informacion registrada exitosamente...")
                                     limpiar_pantalla()
                 
-                elif opcion ==4:
+                elif opcion == 4:
                     limpiar_pantalla()
                     if lista ==[]:
                         input("Actualmente vacia...")
                         limpiar_pantalla()
 
                     else:
+                        print(f"\n{"IdCurso":<30}{"descripcion":<30}{"IdEmpleado":<30}")
+                        for i3 in lista:
+                            print(f"{i3.IdCurso:<30}{i3.descripcion:<30}{i3.IdEmpleado:<30}")
+                            input("Pulse enter para continuar...")
+                            limpiar_pantalla()
+
+                    else:
+                        opcion == 5:
+                        limpiar_pantalla()
+                        print(f"\n{'IdCurso':<30}{'descripcion':<30}{'IdEmpleado':<30}")
+                        for i4 in lista:
+                            print(f"{i4.IdCurso:<30}{i4.descripcion:<30}{i4.IdEmpleado:<30}")
+                            clave = int(input("clave: "))
+                            limpiar_pantalla()
+                            print(f"\n{'IdCurso':<30}{'descripcion':<30}{'IdEmpleado':<30}")
+                        for i5 in lista:
+                            if i5.IdCurso == clave:
+                                print(f"{i5.IdCurso:<30}{i5.descripcion:<30}{i5.IdEmpleado:<30}")
+                                input("Pulse enter para continuar...")
+
+                elif opcion == 6:
+                    break
+                elif opcion>6:
+                    input("Numero no valido, favor de registrar numero valido...")
+                    limpiar_pantalla()
+                    def Informacion():
+                        archivo = open("./PIAequipo/cursos.txt","w",encoding='utf8')
+                        for i6 in lista:
+                            archivo.write(str(f"IdCurso: {i6.IdCurso}, descripcion: {i6.descripcion}, IdEmpleado: {i6.IdEmpleado}""\n"))
+                        archivo.close()
+                        Informacion()
+
+            except ValueError:
+                limpiar_pantalla()
+                input("Introducir unicamente numero...")
+                    
+
+                            
                         
 
 

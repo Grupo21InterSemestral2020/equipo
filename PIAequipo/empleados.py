@@ -28,35 +28,7 @@ class Empleado():
     def direccion(self,direccion):
         self.__direccion = direccion
     
-    def opciones(self):
-        empleados = []
-        while True:
-            print ("""
-            1.- Agregar empleado
-            2.- Borrar empleado
-            3.- Modificar empleado
-            4.- Ver detalles de empleado
-            5.- Salir""")
-            opc = int(input("Elija una opcion: "))
-            if opc == 1:
-                f = open("./PIAequipo/empleados.txt","a",encoding="utf8")
-                idEmpleado = int(input("Ingresa id de empleado: "))
-                nombre = input("Ingresa nombre del empleado: ")
-                direccion = input("Direccion del empleado:")
-                f.write(str(idEmpleado) + "|" + nombre + "|" + direccion + "\n")
-                f.close()
-            
-            elif opc == 2:
-                f = open("./PIAequipo/empleados.txt","r",encoding="utf8")
-                if empleados = []:
-                    input("Vacío. ")
-                else:
-                    id = int(input("ID a borrar: "))
-                    for remover in empleados:
-                        if remover.idEmpleado == id:
-                            empleados.remove(Empleado(id,None,None))
-                            input("Eliminado. ")
-                            f.close()
+
 
     def modificarEmpleado():
         print("Modificacion de parametros: ")
@@ -99,57 +71,47 @@ class Empleado():
                 print (line)
         archivo.close()
         
-    def opciones(self):
+    def menu(self):
+
         empleados = []
         while True:
-            print ("""
-            1.-Agregar empleado
-            2.- Borrar empleado
-            3.- Modificar empleado
-            4.- Ver detalles de empleado
-            5.-Salir""")
+            print ("\n1. Agregar empleado\n2.Borrar empleado\n3.Modificar empleado\n4. Ver detalles de empleado\n5.Salir")
 
-            accion= int(input("Elija una opcion: "))
-            if accion ==1:
+            opcion= int(input("Elija una opcion: "))
+            if opcion ==1:
+                f = open("./PIAequipo/empleados.txt","a",encoding="utf8")
                 self.__idEmpleado= self.__idEmpleado+1
-                self.__nombre=input("Nombre del empleado: ")
-                self.__direccion=input("Direccion del empleado")
-                datos=Empleado(self.__idEmpleado,self.__nombre,self.__direccion)
-                empleados.append(datos)
+                self.__nombre=input("Ingresa el nombre del empleado: ")
+                self.__direccion=input("Ingresa la direccion del empleado")
+                f.write(self.__idEmpleado,self.__nombre,self.__direccion)
+       
+            elif opcion ==2:
+                if empleados==[]:
+                    input("Actualmente vacia")
+                else:
+                    clave=int(input("Ingresa id del empleado a borrar: "))
+                    for remover in empleados:
+                        if remover.idEmpleado == clave:
+                            empleados.remove(Empleado(clave,None,None))
+                            input("Registro borrado")
+            
+            elif opcion ==3:
+                clave = int(input("clave: "))
+                if empleados ==[]:
+                    input("Actualmente vacia")
+                
+                else:
+                    for remover in empleados:
+                        if remover.idEmpleado == clave:
+                            remover.nombre = input("Ingrese nuevo nombre: ")
+                            remover.direccion = input("Ingrese nueva direccion: ")
+                            input("Regirstro actualizado correctamente...")
 
 
-empleado = Empleado("0","dummy","calle sin numero")
-while True:
-    print("1.-Agregar empleado")
-    print("2.-Borrar ")
-    print("3.-Modificar")
-    print("4.-Consultar")
-    print("5.-Ver todos  ")
-    print("6.-Salir")
-    opcion = int(input("Que opcion eliges?"))
 
-    if opcion == 1:
-        print("Agregar empleado")
-        break
-
-    elif opcion == 2:
-        print("Borrar")   
-        break
-
-    elif opcion == 3:
-        print("Modificar")   
-        break
-
-    elif opcion == 4:
-        print("Consultar")   
-        empleado.verDetalles()
-        break    
-
-    elif opcion == 5:
-        print("Ver todos")
-        empleado.consultarEmpleado()
-        break  
-         
-    elif opcion == 6:
-        print("Salir")   
-        break
+            def guardado():
+                archivo=open("./archivos/empleados.txt","w",encoding='utf8')
+                for posicion in empleados:
+                    archivo.write(str(f" idEmpleado: {posicion.idEmpleado}, nombre: {posicion.nombre}, direccion: {posicion.direccion} ""\n"))
+                archivo.close()
+            guardado()
