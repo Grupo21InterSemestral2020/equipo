@@ -70,7 +70,14 @@ class Video:
                                         print("Regirstro eliminado...")
 
                     elif opcion==3:
-                        
+                        print(f"\n{'idVideo':<30}{'nombre':<30}{'url':<30}{'fecha':<30}")
+                        for i2 in lista:
+                            print(f"{i2.idV:<30}{i2.nom:<30}{i2.url:<30}{i2.fechap:<30}")
+                            clave == int(input("clave: "))
+                            if lista ==[]:
+                                print("Regristro vacio actualmente.")
+                                
+
                             
 
 
