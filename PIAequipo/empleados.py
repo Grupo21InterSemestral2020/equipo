@@ -75,7 +75,13 @@ class Empleado():
 
         empleados = []
         while True:
-            print ("\n1. Agregar empleado\n2.Borrar empleado\n3.Modificar empleado\n4. Ver detalles de empleado\n5.Salir")
+            print ("""
+            1. Agregar empleado
+            2. Borrar empleado
+            3. Modificar empleado
+            4. Consultar todo. 
+            5. Ver detalles de empleado
+            6. Salir""")
 
             opcion= int(input("Elija una opcion: "))
             if opcion ==1:
