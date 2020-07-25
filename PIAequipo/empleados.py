@@ -52,3 +52,9 @@ class Empleado():
                             empleados.remove(Empleado(clave,None,None))
                             input("Registro borrado")
 
+            def guardado():
+                archivo=open("./archivos/empleados.txt","w")
+                for posicion in empleados:
+                    archivo.write(str(f" idEmpleado: {posicion.idEmpleado}, nombre: {posicion.nombre}, direccion: {posicion.direccion} ""\n"))
+                archivo.close()
+            guardado()
