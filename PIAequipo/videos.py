@@ -76,7 +76,17 @@ class Video:
                             clave == int(input("clave: "))
                             if lista ==[]:
                                 print("Regristro vacio actualmente.")
-                                
+
+                            else:
+                                for remover in lista:
+                                    if remover.idV == clave:
+                                        remover.nom = ("Ingrese nuevo nombre: ")
+                                        remover.url = int(input("Ingrese nuevo URL: "))
+                                        remover.fechap = int(input("Ingrese nueva fecha: "))
+                                        print("Registro actualizado correctamente...")
+                                        
+
+                            
 
                             
 
