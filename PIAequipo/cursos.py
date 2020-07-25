@@ -24,12 +24,12 @@ class Cursos:
     def IdEmpleado(self):
         return self.__IdEmpleado
 
-    @IdEmpleado.setter
-    def IdEmpleado(self,valor):
-        self.__IdEmpleado = valor
-
+    @IdCurso.setter
+    def IdCurso(self,valor):
+        self.__IdCurso = valor
+    
     def __eq__(self,codigo):
-       return self.__IdEmpleado = codigo
+       return self.__IdCurso == codigo.__IdCurso
 
     def minimenu(self):
         lista =[]
@@ -68,21 +68,14 @@ class Cursos:
                                 lista.remove(Cursos(clave,None,None))
                                 input("El registro se ha borrado: ")    
 
-                    
-                                
-
                 elif opcion == 3:
                     print(f"\n {"IdCurso":<30}{"Descripcion":<30}{"IdEmpleado":<30}")
-                    
-
                     for i2 in lista:
                         print(f"{i2.IdCurso:<30}{i2.descripcion:<30}{i2.IdEmpleado:<30}")
                         clave = int(input("clave: "))
 
                         if lista ==[]:
                             input("Actualmente vacia...")
-                            
-
                         else:
                             for remover in lista:
                                 if remover.IdCurso == clave:
