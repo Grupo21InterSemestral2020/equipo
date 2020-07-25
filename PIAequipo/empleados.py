@@ -33,6 +33,7 @@ class Empleado():
 
         empleados = []
         while True:
+            print(f"{'BIENVENIDO AL MENU EMPLEADOS':^20}")
             print ("""
             1. Agregar empleado
             2. Borrar empleado
