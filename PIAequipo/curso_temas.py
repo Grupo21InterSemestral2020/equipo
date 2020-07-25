@@ -9,22 +9,29 @@ class Curso_Tema:
     @property
     def idc(self):
         return self.__idc
+
+    @property
+    def idt(self):
+        return self.__idt
+
     @idc.setter
     def idc(self,valor):
         self.__idc=valor
-    @property
-    def it(self):
-        return self.__idt
+    
     @idt.setter
     def idt(self,valor):
         self.__idt=valor
+
+    @idct.setter
+    def idct(self,valor):
+        self.__idct=valor    
 
     def menu(self):
         lista=[]
         while True:
             try:
                 opcion=int(input('''
-                Elija la opcion que desea
+                CURSO TEMAS :Elija la opcion que desea
                 1)Agregar
                 2)Borrar
                 3)Modificar
