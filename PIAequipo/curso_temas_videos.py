@@ -27,3 +27,10 @@ class Cuso_tema_video:
     @IdVideo.setter
     def IdVideo(self,valor):
         self.__IdVideo = valor 
+
+    def __eq__(self,otro):
+        return self.__IdCursoTV == otro.__IdCursoTV
+    def minimenu(self):
+        limpiar_pantalla()
+        lista = []
+        
