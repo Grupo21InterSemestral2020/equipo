@@ -44,7 +44,7 @@ class Empleado():
        
             elif opcion ==2:
                 if empleados==[]:
-                    input("Actualmente vacia, enter para continuar...")
+                    input("Actualmente vacia")
                 else:
                     clave=int(input("Ingresa id del empleado a borrar: "))
                     for remover in empleados:
@@ -55,14 +55,14 @@ class Empleado():
             elif opcion ==3:
                 clave = int(input("clave: "))
                 if empleados ==[]:
-                    input("Actualmente vacia, enter para continuar...")
+                    input("Actualmente vacia")
                 
                 else:
                     for remover in empleados:
                         if remover.idEmpleado == clave:
                             remover.nombre = input("Ingrese nuevo nombre: ")
                             remover.direccion = input("Ingrese nueva direccion: ")
-                            input("Regirstro actualixzado correctamente...")
+                            input("Regirstro actualizado correctamente...")
 
 
 
