@@ -70,8 +70,20 @@ class Empleado():
                         if remover.idEmpleado == clave:
                             remover.nombre = input("Ingrese nuevo nombre: ")
                             remover.direccion = input("Ingrese nueva direccion: ")
-                            input("Regirstro actualizado correctamente...")
+                            input("Regirstb  ro actualizado correctamente...")
 
+            elif opcion == 4:
+                #print("Ingresa el Id del empleado que desea consultar: ")
+                archivo = open("../PIAequipo/empleados.txt","r",encoding="utf8")
+                lines = archivo.readlines()
+                for line in lines:
+                    print (line)
+                archivo.close()
+
+            elif opcion == 5:
+                archivo = open("../PIAequipo/empleados.txt","r",encoding="utf8")  
+                id_detalles = input("Ingrese id del empleado: ")
+                lines = archivo.readlines()
             elif opcion==4:
                 if empleados==[]:
                     input("Registro vacio actualmente")
@@ -87,6 +99,11 @@ class Empleado():
             elif opcion>5:
                 input("Error, introduzca numero del minimenu")
 
+                for line in lines:
+                    id = line.split('|')[0]
+                    if id_detalles == id:
+                        print (line)
+                archivo.close()
 
             def guardado():
                 archivo=open("./archivos/empleados.txt","w",encoding='utf8')
