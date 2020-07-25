@@ -68,3 +68,11 @@ class Curso_Tema:
                                 remover.ic=int(input("Ingresa el curso nuevo: "))
                                 remover.it=int(input("Ingresa el tema nuevo: "))
                                 input("Registro Actualizado")
+                elif opcion==4:
+                    if lista==[]:
+                        input("Registro vacio")
+                    else:
+                        print(f"\n{'idCursoTema':<30}{'idCurso':<30}{'idTema':<30}")
+                        for i3 in lista:
+                            print(f"{i3.ict:<30}{i3.ic:<30}{i3.it:<30}")
+                        input("Enter para continuar...")
