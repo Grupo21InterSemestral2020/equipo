@@ -24,9 +24,11 @@ class Cursos:
     def IdEmpleado(self):
         return self.__IdEmpleado
 
-    @IdCurso.setter
-    def IdCurso(self,valor):
-        self.__IdCurso = valor
+    @IdEmpleado.setter
+    def IdEmpleado(self,valor):
+        self.__IdEmpleado = valor
+
+    
     
     def __eq__(self,codigo):
        return self.__IdCurso == codigo.__IdCurso
@@ -38,15 +40,15 @@ class Cursos:
         while true:
             try:
                 opcion = int(input("¿Que desea hacer en este apartado?:\n Agregar.\n Borrar.\n Modificar.\n Consultar.\n Elegir Id.\n Salir."))
-                if opcion<1:
+                if opcion < 1:
                    input("Por favor introduzca numero correcto...")
                     
 
                 elif opcion == 1:
-                    self.__descripcion = int(input("Ingrese la descripcion: "))
+                    self.__descripcion = input("Ingrese la descripcion: ")
                     self.__IdEmpleado = int(input("Ingrese Id del empleado: "))
-                    self.__IdCurso = self.__IdCurso+1
-                    valores = Cursos(self.__IdCurso,self.__IdCurso,descripcion)
+                    self.__IdCurso = self.__IdCurso + 1
+                    valores = Cursos(self.__IdCurso,self.__descripcion,self.__IdCurso)
                     lista.append(valores)
                     input("Registro agregado")
 
@@ -69,9 +71,12 @@ class Cursos:
                                 input("El registro se ha borrado: ")    
 
                 elif opcion == 3:
-                    print(f"\n {"IdCurso":<30}{"Descripcion":<30}{"IdEmpleado":<30}")
+                    #print(f" "IdCurso":<30,"Descripcion":<30,"IdEmpleado":<30")
+                    print ( '{:<30}'.format('IdCurso'),'{:<30}'.format('Descripcion'),'{:<30}'.format('IdEmpleado'))
+                    
+                    
                     for i2 in lista:
-                        print(f"{i2.IdCurso:<30}{i2.descripcion:<30}{i2.IdEmpleado:<30}")
+                        print(f"{i2.IdCurso:<30},{i2.descripcion:<30},{i2.IdEmpleado:<30}")
                         clave = int(input("clave: "))
 
                         if lista ==[]:
@@ -89,30 +94,29 @@ class Cursos:
                         input("Actualmente vacia...")
 
                     else:
-                        print(f"\n{"IdCurso":<30}{"descripcion":<30}{"IdEmpleado":<30}")
+                        #print(f"\n{"IdCurso":<30}{"descripcion":<30}{"IdEmpleado":<30}")
+                        print ( '{:<30}'.format('IdCurso'),'{:<30}'.format('Descripcion'),'{:<30}'.format('IdEmpleado'))
                         for i3 in lista:
-                            print(f"{i3.IdCurso:<30}{i3.descripcion:<30}{i3.IdEmpleado:<30}")
-                            input("Pulse enter para continuar...") 
-                    
+                            print(f"{i3.IdCurso:<30},{i3.descripcion:<30},{i3.IdEmpleado:<30}")
+                            input("Pulse enter para continuar...")       
 
                     
-                            
-
-                    else:
-                        opcion == 5:
-                        print(f"\n{'IdCurso':<30}{'descripcion':<30}{'IdEmpleado':<30}")
+                elif opcion == 5:
+                        #print(f"\n{'IdCurso':<30}{'descripcion':<30}{'IdEmpleado':<30}")
+                        print ( '{:<30}'.format('IdCurso'),'{:<30}'.format('Descripcion'),'{:<30}'.format('IdEmpleado'))
                         for i4 in lista:
-                            print(f"{i4.IdCurso:<30}{i4.descripcion:<30}{i4.IdEmpleado:<30}")
+                            print(f"{i4.IdCurso:<30},{i4.descripcion:<30},{i4.IdEmpleado:<30}")
                             clave = int(input("clave: "))
                         
-                             print(f"\n{'IdCurso':<30}{'descripcion':<30}{'IdEmpleado':<30}")
+                        #print(f"\n{'IdCurso':<30}{'descripcion':<30}{'IdEmpleado':<30}")
+                        print ( '{:<30}'.format('IdCurso'),'{:<30}'.format('Descripcion'),'{:<30}'.format('IdEmpleado'))
                         for i5 in lista:
                             if i5.IdCurso == clave:
-                                print(f"{i5.IdCurso:<30}{i5.descripcion:<30}{i5.IdEmpleado:<30}")
+                                print(f"{i5.IdCurso:<30},{i5.descripcion:<30},{i5.IdEmpleado:<30}")
                                 input("Pulse enter para continuar...")
                  
                  
-                 elif opcion == 6:
+                elif opcion == 6:
                     break
                 elif opcion>6:
                     input("Numero no valido, favor de registrar numero valido...")
