@@ -1,4 +1,4 @@
-class Cuso_tema_video:
+class Curso_tema_video:
     def __init__(self,IdCusoTV,IdCT,IdVideo):
         self.__IdCursoTV = IdCusoTV
         self.__IdCT = IdCT
@@ -33,4 +33,3 @@ class Cuso_tema_video:
     def minimenu(self):
         limpiar_pantalla()
         lista = []
-        
