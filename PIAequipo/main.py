@@ -17,3 +17,16 @@ while True:
             7)Salir
             >>Seleccione opcion: "))
             '''
+        except ValueError:
+            print("Error, ingrese unicamente numero...")
+
+if opcion<1:
+    print("Error, ingrese numero valido...")
+
+elif opcion ==1:
+    valor = Empleado(0,None,None)
+    valor.minimenu()
+
+elif opcion ==2:
+    valor = cursos(0,None,None)
+    valor.minimenu()
