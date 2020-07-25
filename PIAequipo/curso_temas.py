@@ -85,4 +85,17 @@ class Curso_Tema:
                     for i5 in lista:
                         if i5.idct==clave:
                             print(f"{i5.idct:<30}{i5.idc:<30}{i5.idt:<30}")
+
+                elif opcion==6:
+                    break
+                elif opcion>6:
+                    input("Error, introduzca opcion valida")
+                def informacion():
+                    archivo=open("./archivos/Curso_Tema.txt","w",encoding='utf8')
+                    for i6 in lista:
+                        archivo.write(str(f" IdCursoTema: {i6.idct}, IdCurso: {i6.idc}, IdTema: {i6.idt}""\n"))
+                    archivo.close()
+                informacion()
+            except ValueError:
+                input("Error, introduzca solo numero de opcion valida del menu")
  
