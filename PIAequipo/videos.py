@@ -29,6 +29,7 @@ class Video:
     def fechap(self,valor):
         self.__fechap = valor
 
+
     def __eq__ (self,otro):
         return self.__idV==otro.__idV
 
