@@ -3,6 +3,7 @@ from empleados import Empleado
 from temas import Tema
 from curso_temas import Curso_Tema
 from videos import Video
+from curso_temas_videos import Curso_tema_video
 
 while True:
         try:
@@ -15,18 +16,4 @@ while True:
             5)Temas Asignados
             6)VideosAsignados
             7)Salir
-            >>Seleccione opcion: "))
-            '''
-        except ValueError:
-            print("Error, ingrese unicamente numero...")
-
-if opcion<1:
-    print("Error, ingrese numero valido...")
-
-elif opcion ==1:
-    valor = Empleado(0,None,None)
-    valor.minimenu()
-
-elif opcion ==2:
-    valor = cursos(0,None,None)
-    valor.minimenu()
+            >>Seleccione opcion: '''))
