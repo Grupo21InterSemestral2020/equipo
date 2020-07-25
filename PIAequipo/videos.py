@@ -52,3 +52,26 @@ class Video:
                         datos=Video(self.__idV,self.__nom,self.__url,self.__fechap)
                         lista.append(datos)
                         print("Se ha agregado el registro")
+                        
+                    
+                    elif opcion==2:
+                        print(f"\n{'idVideo':<30}{'nombre':<30}{'url':<30}{'fecha':<30}")
+                        for i1 in lista:
+                            print(f"{i1.idV:<30}{i1.nom:<30}{i1.url:<30}{i1.fechap:<30}")
+
+                            if lista==[]
+                            print("Esta vacia...")
+
+                            else:
+                                clave == int(input("clave: "))
+                                for remover in lista:
+                                    if remover.idV == clave:
+                                        lista.remove(video(clave,None,None,None))
+                                        print("Regirstro eliminado...")
+
+                    elif opcion==3:
+                        
+                            
+
+
+                        
