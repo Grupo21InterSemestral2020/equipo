@@ -23,7 +23,7 @@ class Curso_Tema:
         lista=[]
         while True:
             try:
-                opcion=int(input("¿Qué Desea hacer?\n1)Agregar\n2)Borrar\n3)Modificar\n4)Consultar\n5)Elegir Clave\n6)Salir\nOpcion:"))
+                opcion=int(input("¿Qué Desea hacer?\n1)Agregar\n2)Borrar\n3)Modificar\n4)Consultar todo\n5)Ver detalles\n6)Salir\nOpcion:"))
                 if opcion<1:
                     input("Error, introduzca opcion valida")
 
@@ -74,5 +74,15 @@ class Curso_Tema:
                     else:
                         print(f"\n{'idCursoTema':<30}{'idCurso':<30}{'idTema':<30}")
                         for i3 in lista:
-                            print(f"{i3.ict:<30}{i3.ic:<30}{i3.it:<30}")
-                        input("Enter para continuar...")
+                            print(f"{i3.idct:<30}{i3.idc:<30}{i3.idt:<30}")
+                
+                elif opcion==5:
+                    print(f"\n{'idCursoTema':<30}{'idCurso':<30}{'idTema':<30}")
+                    for i4 in lista:
+                        print(f"{i4.idct:<30}{i4.idc:<30}{i4.idt:<30}")
+                    clave=int(input("Ingrese clave:"))
+                    print(f"\n{'idCursoTema':<30}{'idCurso':<30}{'idTema':<30}")
+                    for i5 in lista:
+                        if i5.idct==clave:
+                            print(f"{i5.idct:<30}{i5.idc:<30}{i5.idt:<30}")
+ 
