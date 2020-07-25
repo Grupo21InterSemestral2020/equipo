@@ -51,6 +51,20 @@ class Empleado():
                         if remover.idEmpleado == clave:
                             empleados.remove(Empleado(clave,None,None))
                             input("Registro borrado")
+            
+            elif opcion ==3:
+                clave = int(input("clave: "))
+                if empleados ==[]:
+                    input("Actualmente vacia, enter para continuar...")
+                
+                else:
+                    for remover in empleados:
+                        if remover.idEmpleado == clave:
+                            remover.nombre = input("Ingrese nuevo nombre: ")
+                            remover.direccion = input("Ingrese nueva direccion: ")
+                            input("Regirstro actualixzado correctamente...")
+
+
 
             def guardado():
                 archivo=open("./archivos/empleados.txt","w")
