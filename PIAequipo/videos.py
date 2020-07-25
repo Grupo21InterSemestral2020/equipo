@@ -106,3 +106,12 @@ class Video:
                     break
                 elif opcion>6:
                     input("Introduce un numero valido")
+
+                def informacion():
+                    archivo=open("./archivos/videos.txt","w")
+                    for i6 in lista:
+                        archivo.write(str(f" idVideo: {i6.idV}, nombre: {i6.nom}, url: {i6.url}, fecha: {i6.fechap}""\n"))
+                    archivo.close()
+                informacion()
+            except ValueError:
+                input("Se produjo un error, vuelve a intentar")
