@@ -43,15 +43,11 @@ class Empleado():
 
             opcion= int(input("Elija una opcion: "))
             if opcion ==1:
-                f = open("./archivos/empleados.txt","a",encoding="utf8")
                 self.__idEmpleado= self.__idEmpleado+1
                 self.__nombre=input("Ingresa el nombre del empleado: ")
                 self.__direccion=input("Ingresa la direccion del empleado")
-                f.write(str(self.__idTema) + "|" + self.__nombre + "\n")
-                f.close()
-                print("Tema agregado.")
-                break
-            
+                print("Empleado agregado.")
+
             elif opcion ==2:
                 if empleados==[]:
                     input("Actualmente vacia")
