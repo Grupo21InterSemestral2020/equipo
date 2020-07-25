@@ -23,7 +23,15 @@ class Curso_Tema:
         lista=[]
         while True:
             try:
-                opcion=int(input("¿Qué Desea hacer?\n1)Agregar\n2)Borrar\n3)Modificar\n4)Consultar todo\n5)Ver detalles\n6)Salir\nOpcion:"))
+                opcion=int(input('''
+                Elija la opcion que desea
+                1)Agregar
+                2)Borrar
+                3)Modificar
+                4)Consultar todo
+                5)Ver detalles
+                6)Salir
+                >>Opcion:'''))
                 if opcion<1:
                     input("Error, introduzca opcion valida")
 
