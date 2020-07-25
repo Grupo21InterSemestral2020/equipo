@@ -84,7 +84,10 @@ class Video:
                                         remover.url = int(input("Ingrese nuevo URL: "))
                                         remover.fechap = int(input("Ingrese nueva fecha: "))
                                         print("Registro actualizado correctamente...")
-                                        
+                
+                except ValueError:
+                    print("Se produjo un error...")
+
 
                             
 
