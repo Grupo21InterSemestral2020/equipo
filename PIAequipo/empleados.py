@@ -74,7 +74,7 @@ class Empleado():
                             input("Registro actualizado correctamente.")
 
             elif opcion == 4:
-                #print("Ingresa el Id del empleado que desea consultar: ")
+                print("Ingresa el Id del empleado que desea consultar: ")
                 archivo = open("../PIAequipo/empleados.txt","r",encoding="utf8")
                 lines = archivo.readlines()
                 for line in lines:
@@ -82,10 +82,6 @@ class Empleado():
                 archivo.close()
 
             elif opcion == 5:
-                archivo = open("../PIAequipo/empleados.txt","r",encoding="utf8")  
-                id_detalles = input("Ingrese id del empleado: ")
-                lines = archivo.readlines()
-            elif opcion==4:
                 if empleados==[]:
                     input("Registro vacio actualmente")
                 else:
@@ -93,18 +89,12 @@ class Empleado():
 
                     for posicion in empleados:
                         print(f"{posicion.idEmpleado:<20}{posicion.nombre:<20}{posicion.direccion:<20}")
-            
-            elif opcion == 5:
+
+            elif opcion == 6:
                 break 
             
-            elif opcion>5:
+            elif opcion>6:
                 input("Error, introduzca numero del minimenu")
-
-                for line in lines:
-                    id = line.split('|')[0]
-                    if id_detalles == id:
-                        print (line)
-                archivo.close()
 
             def guardado():
                 archivo=open("./archivos/empleados.txt","w",encoding='utf8')
