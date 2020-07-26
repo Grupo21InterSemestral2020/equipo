@@ -38,7 +38,6 @@ class Tema:
                 info= Tema(self.__idTema,self.__nombre)
                 tema.append(info)
                 print("Tema agregado.")
-                break
             
             elif opc == 2:
                 if tema == []:
