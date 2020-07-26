@@ -119,6 +119,17 @@ class Curso_tema_video:
                     input("Enter para continuar...")
 
                 elif opcion==6:
+                    break
+                elif opcion>6:
+                    input("Error, introduzca numero correcto, enter para continuar...")
+                    print("")
+                def informacion():
+                    archivo=open("./archivos/Curso_Tema_Video.txt","w")
+                    for i6 in lista:
+                        archivo.write(str(f" IdCursoTV: {i6.icttv}, IdCT: {i6.ict}, IdVideo: {i6.iv}""\n"))
+                    archivo.close()
+                informacion()
+                print("")
 
 
             except ValueError:
