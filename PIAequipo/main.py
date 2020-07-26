@@ -19,6 +19,7 @@ while True:
             7)Salir
             >>Seleccione opcion: '''))
             
+        
             if opcion == 1:
                 valor=Empleado(0,None,None)
                 valor.menu()
@@ -46,7 +47,11 @@ while True:
             elif opcion == 7:
                 break
 
-        except :
+            except ValueError:
             print("Error, introducir unicamente numero")
+
+            
+        
+           
 
         
