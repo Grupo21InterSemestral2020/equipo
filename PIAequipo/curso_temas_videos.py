@@ -106,7 +106,17 @@ class Curso_tema_video:
                         print("")
 
                 elif opcion ==5:
-                    
+                    print("")
+                    print(f"\n{'idCursoTV':<30}{'idCT':<30}{'idVideo':<30}")
+                    for i4 in lista:
+                        print(f"{i4.icttv:<30}{i4.ict:<30}{i4.iv:<30}")
+                    clave=int(input("Clave:"))
+                    print("")
+                    print(f"\n{'idCursoTV':<30}{'idCT':<30}{'idVideo':<30}")
+                    for i5 in lista:
+                        if i5.icttv==clave:
+                            print(f"{i5.icttv:<30}{i5.ict:<30}{i5.iv:<30}")
+                    input("Enter para continuar...")
 
 
 
