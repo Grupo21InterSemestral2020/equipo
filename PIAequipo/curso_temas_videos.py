@@ -98,7 +98,7 @@ class Curso_tema_video:
                     if lista==[]:
                         input("Registro vacio actualmente, presione enter para continuar..")
                         print("")
-                    lse:
+                    else:
                         print(f"\n{'idCursoTV':<30}{'idCT':<30}{'idVideo':<30}")
                         for i3 in lista:
                             print(f"{i3.icttv:<30}{i3.ict:<30}{i3.iv:<30}")
