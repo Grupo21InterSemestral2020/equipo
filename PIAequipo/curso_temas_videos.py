@@ -1,6 +1,6 @@
 class Curso_tema_video:
     def __init__(self,IdCursoTV,IdCT,IdVideo):
-        self.__IdCursoTV = IdCusoTV
+        self.__IdCursoTV = IdCursoTV
         self.__IdCT = IdCT
         self.__IdVideo = IdVideo
 
