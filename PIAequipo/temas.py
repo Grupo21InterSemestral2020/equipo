@@ -49,7 +49,24 @@ class Tema:
                             tema.remove(Tema(clave,None))
                             input("El registro fue borrado. ")
 
-            
+            elif opc == 3:
+                id = int(input("Clave: "))
+                if tema == []:
+                    print("No hay información.")
+                else:
+                    for remover in tema:
+                        if remover.idTema == id:
+                            remover.nombre = input ("Nombre nuevo del tema: ")
+                            print("Registro actualizado.")
+
+            elif opc == 4:
+                id = int(input("Clave: "))
+                if tema == []:
+                    input("No hay información.")
+                else:
+                    print(f"{'idTema': <20} {'Nombre' :<20}")
+
+
 
 valor = Tema(1,None)
 valor.menu()
