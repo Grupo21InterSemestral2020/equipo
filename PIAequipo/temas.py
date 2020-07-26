@@ -35,7 +35,7 @@ class Tema:
             if opc == 1:
                 self.__idTema= self.__idTema+1
                 self.__nombre=input("Nombre del tema: ")
-                info= Tema(self.__idTema,señf.__nombre)
+                info= Tema(self.__idTema,self.__nombre)
                 tema.append(info)
                 print("Tema agregado.")
                 break
@@ -47,11 +47,11 @@ class Tema:
                     id = int(input("ID del tema: "))
                     for remover in tema:
                         if remover.idTema == id:
-                            tema.remove(Tema(clave,None))
+                            tema.remove(Tema(id,None))
                             input("El registro fue borrado. ")
 
             elif opc == 3:
-                id = int(input("Clave: "))
+                id = int(input("ID: "))
                 if tema == []:
                     print("No hay información.")
                 else:
@@ -61,7 +61,7 @@ class Tema:
                             print("Registro actualizado.")
 
             elif opc == 4:
-                id = int(input("Clave: "))
+                id = int(input("ID: "))
                 if tema == []:
                     input("No hay información.")
                 else:
@@ -91,6 +91,3 @@ class Tema:
                     f.close()
             guardar()
 
-
-valor = Tema(1,None)
-valor.menu()
