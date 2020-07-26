@@ -6,47 +6,44 @@ from videos import Video
 from curso_temas_videos import Curso_tema_video
 
 while True:
-    while True:
-        try:
-            opcion=int(input('''
-            ¿Donde desea interactuar?
-            1)Empleados
-            2)Cursos
-            3)Temas
-            4)Videos
-            5)Temas_Curso
-            6)VideosAsignados
-            7)Salir
-            >>Seleccione opcion: '''))
+    try:
+        opcion=int(input('''
+        ¿Donde desea interactuar?
+        1)Empleados
+        2)Cursos
+        3)Temas
+        4)Videos
+        5)Temas_Curso
+        6)VideosAsignados
+        7)Salir
+        >>Seleccione opcion: '''))
             
-            if opcion == 1:
+        if opcion == 1:
                 valor=Empleado(0,None,None)
                 valor.menu()
 
-            elif opcion == 2:
+        elif opcion == 2:
                 valor=Cursos(0,None,None)
                 valor.minimenu()
 
-            elif opcion == 3:
+        elif opcion == 3:
                 valor=Tema(0,0)
-                valor.opciones()
+                valor.menu()
 
-            elif opcion == 4:
+        elif opcion == 4:
                 valor=Video(0,0,0,0)
                 valor.minimenu()
 
-            elif opcion == 5:
+        elif opcion == 5:
                 valor=Curso_Tema(0,0,0)
                 valor.menu() 
 
-            elif opcion == 6:
+        elif opcion == 6:
                 valor=Curso_tema_video(0,0,0)
                 valor.minimenu()    
 
-            elif opcion == 7:
+        elif opcion == 7:
                 break
 
-        except :
-            print("Error, introducir unicamente numero")
-
-        
+    except :
+        print("Error, introducir unicamente numero")
