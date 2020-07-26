@@ -25,13 +25,13 @@ class Cursos:
         return self.__IdEmpleado
 
     @IdEmpleado.setter
-    def IdEmpleado(self,valor):
-        self.__IdEmpleado = valor
+    def IdEmpleado(self,codigo):
+        self.__IdEmpleado = codigo
 
     
     
-    def __eq__(self,codigo):
-       return self.__IdCurso == codigo.__IdCurso
+    def __eq__(self,otro):
+       return self.__IdCurso == otro.__IdCurso
 
     def minimenu(self):
         lista =[]
@@ -50,7 +50,7 @@ class Cursos:
                     self.__IdCurso = self.__IdCurso + 1
                     valores = Cursos(self.__IdCurso,self.__descripcion,self.__IdCurso)
                     lista.append(valores)
-                    input("Registro agregado")
+                    print("Registro agregado")
 
                     
                     
@@ -61,65 +61,65 @@ class Cursos:
                         print(f"{i1.IdCurso:<30}{i1.descripcion:<30}{i1.IdEmpleado:<30}")
 
                     if lista ==[]:
-                        input("Actualmente vacia...")
+                        print("Actualmente vacia...")
                     
                     else:
                         clave = int(input("clave: "))
                         for remover in lista:
                             if remover.IdCurso == clave:
                                 lista.remove(Cursos(clave,None,None))
-                                input("El registro se ha borrado: ")    
+                                print("El registro se ha borrado: ")    
 
                 elif opcion == 3:
-                    #print(f" "IdCurso":<30,"Descripcion":<30,"IdEmpleado":<30")
-                    print ( '{:<30}'.format('IdCurso'),'{:<30}'.format('Descripcion'),'{:<30}'.format('IdEmpleado'))
+                    print(f" {"IdCurso":<30},{"Descripcion":<30},{"IdEmpleado":<30}")
+            
                     
-                    
-                    for i2 in lista:
+                     for i2 in lista:
                         print(f"{i2.IdCurso:<30},{i2.descripcion:<30},{i2.IdEmpleado:<30}")
                         clave = int(input("clave: "))
 
                         if lista ==[]:
-                            input("Actualmente vacia...")
+                            print("Actualmente vacia...")
                         else:
                             for remover in lista:
                                 if remover.IdCurso == clave:
                                     remover.descripcion = int(input("Ingrese la descripcion nueva: "))
                                     remover.IdEmpleado = int(input("Ingrese el nuevo codigo del empleado: "))
                                     print("Informacion registrada exitosamente...")
-                                    limpiar_pantalla()
+                   
+                                    
                 
                 elif opcion == 4:
                     if lista ==[]:
-                        input("Actualmente vacia...")
+                        print("Actualmente vacia...")
 
                     else:
-                        #print(f"\n{"IdCurso":<30}{"descripcion":<30}{"IdEmpleado":<30}")
-                        print ( '{:<30}'.format('IdCurso'),'{:<30}'.format('Descripcion'),'{:<30}'.format('IdEmpleado'))
+                        print(f"\n{"IdCurso":<30}{"descripcion":<30}{"IdEmpleado":<30}")
+                        
                         for i3 in lista:
                             print(f"{i3.IdCurso:<30},{i3.descripcion:<30},{i3.IdEmpleado:<30}")
-                            input("Pulse enter para continuar...")       
+                            print("Pulse enter para continuar...")       
 
                     
                 elif opcion == 5:
-                        #print(f"\n{'IdCurso':<30}{'descripcion':<30}{'IdEmpleado':<30}")
-                        print ( '{:<30}'.format('IdCurso'),'{:<30}'.format('Descripcion'),'{:<30}'.format('IdEmpleado'))
+                        print(f"\n{'IdCurso':<30}{'descripcion':<30}{'IdEmpleado':<30}")
+                        
                         for i4 in lista:
                             print(f"{i4.IdCurso:<30},{i4.descripcion:<30},{i4.IdEmpleado:<30}")
                             clave = int(input("clave: "))
                         
-                        #print(f"\n{'IdCurso':<30}{'descripcion':<30}{'IdEmpleado':<30}")
-                        print ( '{:<30}'.format('IdCurso'),'{:<30}'.format('Descripcion'),'{:<30}'.format('IdEmpleado'))
+                        print(f"\n{'IdCurso':<30}{'descripcion':<30}{'IdEmpleado':<30}")
+                        
                         for i5 in lista:
                             if i5.IdCurso == clave:
                                 print(f"{i5.IdCurso:<30},{i5.descripcion:<30},{i5.IdEmpleado:<30}")
-                                input("Pulse enter para continuar...")
+                                print("Pulse enter para continuar...")
                  
                  
                 elif opcion == 6:
                     break
                 elif opcion>6:
-                    input("Numero no valido, favor de registrar numero valido...")
+                    print("Numero no valido, favor de registrar numero valido...")
                     
                     def Informacion():
                         archivo = open("./PIAequipo/cursos.txt","w",encoding='utf8')
@@ -129,7 +129,7 @@ class Cursos:
                         Informacion()
 
             except ValueError:
-                input("Introducir unicamente numero...")
+                print("Introducir unicamente numero...")
                 
                     
 
