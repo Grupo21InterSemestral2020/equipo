@@ -118,6 +118,7 @@ class Curso_tema_video:
                             print(f"{i5.icttv:<30}{i5.ict:<30}{i5.iv:<30}")
                     input("Enter para continuar...")
 
+                elif opcion==6:
 
 
             except ValueError:
