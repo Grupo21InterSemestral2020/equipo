@@ -57,7 +57,7 @@ class Cursos:
                 5)Elegir Id
                 6)Salir'''))
                 if opcion < 1:
-                    limpiar_pantalla()
+                   limpiar_pantalla()
                    input("Por favor introduzca numero correcto...")
                     
 
@@ -129,19 +129,17 @@ class Cursos:
                     
                 elif opcion == 5:
                     limpiar_pantalla()
-                        print(f"\n{'IdCurso':<30}{'descripcion':<30}{'IdEmpleado':<30}")
+                    print(f"\n{'IdCurso':<30}{'descripcion':<30}{'IdEmpleado':<30}")
+                    print(f"{i4.IdCurso:<30}{i4.descripcion:<30}{i4.IdEmpleado:<30}")
+                    clave = int(input("clave: "))
+                    limpiar_pantalla()
                         
-                        for i4 in lista:
-                            print(f"{i4.IdCurso:<30}{i4.descripcion:<30}{i4.IdEmpleado:<30}")
-                            clave = int(input("clave: "))
-                            limpiar_pantalla()
+                    print(f"\n{'IdCurso':<30}{'descripcion':<30}{'IdEmpleado':<30}")
                         
-                        print(f"\n{'IdCurso':<30}{'descripcion':<30}{'IdEmpleado':<30}")
-                        
-                        for i5 in lista:
-                            if i5.IdCurso == clave:
-                                print(f"{i5.IdCurso:<30}{i5.descripcion:<30}{i5.IdEmpleado:<30}")
-                                input("Pulse enter para continuar...")
+                    for i5 in lista:
+                        if i5.IdCurso == clave:
+                            print(f"{i5.IdCurso:<30}{i5.descripcion:<30}{i5.IdEmpleado:<30}")
+                            input("Pulse enter para continuar...")
                  
                  
                 elif opcion == 6:
