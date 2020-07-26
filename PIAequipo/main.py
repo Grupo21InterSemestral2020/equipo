@@ -47,8 +47,8 @@ while True:
                 break
 
 
-        except ValueError:
-            print("Error, introducir unicamente numero")
+    except ValueError:
+        print("Error, introducir unicamente numero")
 
             
         
