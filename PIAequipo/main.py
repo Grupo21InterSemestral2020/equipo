@@ -6,6 +6,7 @@ from videos import Video
 from curso_temas_videos import Curso_tema_video
 
 while True:
+    while True:
         try:
             opcion=int(input('''
             ¿Donde desea interactuar?
