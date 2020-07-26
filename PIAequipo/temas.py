@@ -74,7 +74,11 @@ class Tema:
                     for element in tema:
                         print (element)
             
-                            
+            elif opc == 6:
+                print("Saliendo del programa. ")
+                break
+
+           
 
 
 
