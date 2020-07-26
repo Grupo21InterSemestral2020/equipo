@@ -24,11 +24,12 @@ class Tema:
         while True:
             print(f"{'BIENVENIDO AL MENU DE TEMAS.': <20}")
             print ("""
-            1.- Agregar tema
-            2.- Borrar tema
-            3.- Modificar tema
-            4.- Ver detalles del tema
-            5.- Salir""")
+            1.- Agregar tema.
+            2.- Borrar tema.
+            3.- Modificar tema.
+            4.- Ver detalles del tema.
+            5.- Consultar todo.
+            6.- Salir.""")
 
             opc= int(input("Elija una opcion: "))
             if opc == 1:
@@ -65,6 +66,15 @@ class Tema:
                     input("No hay información.")
                 else:
                     print(f"{'idTema': <20} {'Nombre' :<20}")
+
+            elif opc == 5:
+                if tema ==[]:
+                    print("No hay informacion. ")
+                else:
+                    for element in tema:
+                        print (element)
+            
+                            
 
 
 
