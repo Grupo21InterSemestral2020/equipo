@@ -44,6 +44,7 @@ class Cursos:
        return self.__IdCurso == otro.__IdCurso
 
     def minimenu(self):
+        limpiar_pantalla()
         lista =[]
         while True:
             try:
@@ -56,16 +57,19 @@ class Cursos:
                 5)Elegir Id
                 6)Salir'''))
                 if opcion < 1:
+                    limpiar_pantalla()
                    input("Por favor introduzca numero correcto...")
                     
 
                 elif opcion == 1:
+                    limpiar_pantalla()
                     self.__descripcion = input("Ingrese la descripcion: ")
                     self.__IdEmpleado = int(input("Ingrese Id del empleado: "))
                     self.__IdCurso = self.__IdCurso + 1
                     valores = Cursos(self.__IdCurso,self.__descripcion,self.__IdCurso)
                     lista.append(valores)
                     input("Registro agregado")
+                    limpiar_pantalla()
 
                     
                     
