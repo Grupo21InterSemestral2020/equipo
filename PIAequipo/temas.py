@@ -84,6 +84,13 @@ class Tema:
                 Favor de introducir solo numeros de las opciones. """)
 
 
+            def guardar():
+                f = open("./archivos/temas.txt","w")
+                for posicion in tema:
+                    f.write(str(f" ID TEMA: {posicion.idTema}, NOMBRE: {posicion.nombre}"))
+                    f.close()
+            guardar()
+
 
 valor = Tema(1,None)
 valor.menu()
