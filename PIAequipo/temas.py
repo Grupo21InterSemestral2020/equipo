@@ -19,9 +19,10 @@ class Tema:
     def nombre(self,nombre):
         self.__nombre = nombre
 
-    def opciones(self):
+    def menu(self):
         tema = []
         while True:
+            print(f"{'BIENVENIDO AL MENU DE TEMAS.': <20}")
             print ("""
             1.- Agregar tema
             2.- Borrar tema
@@ -31,15 +32,16 @@ class Tema:
 
             opc= int(input("Elija una opcion: "))
             if opc == 1:
-                f = open("./PIAequipo/temas.txt","a",encoding="utf8")
                 self.__idTema= self.__idTema+1
                 self.__nombre=input("Nombre del tema: ")
-                f.write(str(self.__idTema) + "|" + self.__nombre + "\n")
-                f.close()
+                info= Tema(self.__idTema,señf.__nombre)
+                tema.append(info)
                 print("Tema agregado.")
+                break
+            
 
 
 
 
 valor = Tema(1,None)
-valor.opciones()
+valor.menu()
