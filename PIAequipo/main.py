@@ -24,29 +24,28 @@ while True:
 
             elif opcion == 2:
                 valor=Cursos(0,None,None)
-                valor.minimenu()  #corregir nombre
+                valor.minimenu()
 
             elif opcion == 3:
-                valor=Tema(0,None,None)
-                valor.opciones()  #corregir nombre
+                valor=Tema(0,0)
+                valor.opciones()
 
             elif opcion == 4:
-                valor=Video(0,None,None,None)
-                valor.minimenu() #corregir nombre
+                valor=Video(0,0,0,0)
+                valor.minimenu()
 
             elif opcion == 5:
-                valor=Curso_Tema(0,None,None)
+                valor=Curso_Tema(0,0,0)
                 valor.menu() 
 
             elif opcion == 6:
-                valor=Curso_tema_video(0,None,None)
-                valor.minimenu()    #corregir nombre y hacer menu     
+                valor=Curso_tema_video(0,0,0)
+                valor.minimenu()    
 
             elif opcion == 7:
                 break
 
         except :
-            #limpiar_pantalla()
-            input("Error, introducir unicamente numero, vuelva a intentar, enter para continuar...")
+            print("Error, introducir unicamente numero")
 
         
