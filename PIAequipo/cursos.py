@@ -56,7 +56,7 @@ class Cursos:
                     
 
                 elif opcion == 2:
-                    print(f"\n{i1.IdCurso:<30}{i1.descripcion:<30}{i1.IdEmpleado:<30}")
+                    print(f"\n{'IdCurso':<30}{'descripcion':<30}{'IdEmpleado':<30}")
                     for i1 in lista:
                         print(f"{i1.IdCurso:<30}{i1.descripcion:<30}{i1.IdEmpleado:<30}")
 
@@ -71,7 +71,7 @@ class Cursos:
                                 print("El registro se ha borrado: ")    
 
                 elif opcion == 3:
-                    print(f" {"IdCurso":<30},{"Descripcion":<30},{"IdEmpleado":<30}")
+                    print(f"\n{"IdCurso":<30},{"descripcion":<30},{"IdEmpleado":<30}")
             
                     
                      for i2 in lista:
