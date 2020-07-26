@@ -18,32 +18,40 @@ while True:
         7)Salir
         >>Seleccione opcion: '''))
             
+        
         if opcion == 1:
-                valor=Empleado(0,None,None)
-                valor.menu()
+            valor=Empleado(0,None,None)
+            valor.menu()
 
         elif opcion == 2:
-                valor=Cursos(0,None,None)
-                valor.minimenu()
+            valor=Cursos(0,None,None)
+            valor.minimenu()
 
         elif opcion == 3:
-                valor=Tema(0,0)
-                valor.menu()
+            valor=Tema(0,0)
+            valor.menu()
 
         elif opcion == 4:
-                valor=Video(0,0,0,0)
-                valor.minimenu()
+            valor=Video(0,0,0,0)
+            valor.minimenu()
 
         elif opcion == 5:
-                valor=Curso_Tema(0,0,0)
-                valor.menu() 
+            valor=Curso_Tema(0,0,0)
+            valor.menu() 
 
         elif opcion == 6:
-                valor=Curso_tema_video(0,0,0)
-                valor.minimenu()    
+            valor=Curso_tema_video(0,0,0)
+            valor.minimenu()    
 
         elif opcion == 7:
                 break
 
-    except :
-        print("Error, introducir unicamente numero")
+
+        except ValueError:
+            print("Error, introducir unicamente numero")
+
+            
+        
+           
+
+        
