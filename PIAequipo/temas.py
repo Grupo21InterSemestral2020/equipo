@@ -39,9 +39,17 @@ class Tema:
                 print("Tema agregado.")
                 break
             
+            elif opc == 2:
+                if tema == []:
+                    print("No hay información.")
+                else: 
+                    id = int(input("ID del tema: "))
+                    for remover in tema:
+                        if remover.idTema == id:
+                            tema.remove(Tema(clave,None))
+                            input("El registro fue borrado. ")
 
-
-
+            
 
 valor = Tema(1,None)
 valor.menu()
