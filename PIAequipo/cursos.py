@@ -55,7 +55,8 @@ class Cursos:
                 3)Modificar
                 4)Consultar
                 5)Elegir Id
-                6)Salir'''))
+                6)Salir 
+                >>> Seleccione opcion:'''))
                 if opcion < 1:
                    limpiar_pantalla()
                    input("Por favor introduzca numero correcto...")
