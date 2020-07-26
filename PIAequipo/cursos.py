@@ -35,11 +35,16 @@ class Cursos:
 
     def minimenu(self):
         lista =[]
-        
-
-        while true:
+        while True:
             try:
-                opcion = int(input("¿Que desea hacer en este apartado?:\n Agregar.\n Borrar.\n Modificar.\n Consultar.\n Elegir Id.\n Salir."))
+                opcion = int(input('''
+                ¿Que desea hacer en este apartado?:
+                1)Agregar
+                Borrar
+                Modificar
+                Consultar
+                Elegir Id
+                Salir'''))
                 if opcion < 1:
                    input("Por favor introduzca numero correcto...")
                     
@@ -71,10 +76,8 @@ class Cursos:
                                 input("El registro se ha borrado: ")    
 
                 elif opcion == 3:
-                    print(f"\n{"IdCurso":<30},{"descripcion":<30},{"IdEmpleado":<30}")
-            
-                    
-                     for i2 in lista:
+                    print(f"\n{'IdCurso':<30},{'descripcion':<30},{'IdEmpleado':<30}")
+                    for i2 in lista:
                         print(f"{i2.IdCurso:<30},{i2.descripcion:<30},{i2.IdEmpleado:<30}")
                         clave = int(input("clave: "))
 
@@ -94,7 +97,7 @@ class Cursos:
                         input("Actualmente vacia...")
 
                     else:
-                        print(f"\n{"IdCurso":<30}{"descripcion":<30}{"IdEmpleado":<30}")
+                        print(f"\n{'IdCurso':<30}{'descripcion':<30}{'IdEmpleado':<30}")
                         
                         for i3 in lista:
                             print(f"{i3.IdCurso:<30},{i3.descripcion:<30},{i3.IdEmpleado:<30}")
