@@ -50,7 +50,7 @@ class Cursos:
                     self.__IdCurso = self.__IdCurso + 1
                     valores = Cursos(self.__IdCurso,self.__descripcion,self.__IdCurso)
                     lista.append(valores)
-                    print("Registro agregado")
+                    input("Registro agregado")
 
                     
                     
@@ -61,14 +61,14 @@ class Cursos:
                         print(f"{i1.IdCurso:<30}{i1.descripcion:<30}{i1.IdEmpleado:<30}")
 
                     if lista ==[]:
-                        print("Actualmente vacia...")
+                        input("Actualmente vacia...")
                     
                     else:
                         clave = int(input("clave: "))
                         for remover in lista:
                             if remover.IdCurso == clave:
                                 lista.remove(Cursos(clave,None,None))
-                                print("El registro se ha borrado: ")    
+                                input("El registro se ha borrado: ")    
 
                 elif opcion == 3:
                     print(f"\n{"IdCurso":<30},{"descripcion":<30},{"IdEmpleado":<30}")
@@ -79,7 +79,7 @@ class Cursos:
                         clave = int(input("clave: "))
 
                         if lista ==[]:
-                            print("Actualmente vacia...")
+                            input("Actualmente vacia...")
                         else:
                             for remover in lista:
                                 if remover.IdCurso == clave:
@@ -91,14 +91,14 @@ class Cursos:
                 
                 elif opcion == 4:
                     if lista ==[]:
-                        print("Actualmente vacia...")
+                        input("Actualmente vacia...")
 
                     else:
                         print(f"\n{"IdCurso":<30}{"descripcion":<30}{"IdEmpleado":<30}")
                         
                         for i3 in lista:
                             print(f"{i3.IdCurso:<30},{i3.descripcion:<30},{i3.IdEmpleado:<30}")
-                            print("Pulse enter para continuar...")       
+                            input("Pulse enter para continuar...")       
 
                     
                 elif opcion == 5:
@@ -113,13 +113,13 @@ class Cursos:
                         for i5 in lista:
                             if i5.IdCurso == clave:
                                 print(f"{i5.IdCurso:<30},{i5.descripcion:<30},{i5.IdEmpleado:<30}")
-                                print("Pulse enter para continuar...")
+                                input("Pulse enter para continuar...")
                  
                  
                 elif opcion == 6:
                     break
                 elif opcion>6:
-                    print("Numero no valido, favor de registrar numero valido...")
+                    input("Numero no valido, favor de registrar numero valido...")
                     
                     def Informacion():
                         archivo = open("./PIAequipo/cursos.txt","w",encoding='utf8')
