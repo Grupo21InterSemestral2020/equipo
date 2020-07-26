@@ -1,3 +1,13 @@
+from os import system,name
+def limpiar_pantalla():
+    if name == "nt":
+        system("cls")
+    else:
+        system("clear")
+
+
+
+
 class Cursos:
     def __init__(self,IdCurso,descripcion,IdEmpleado):
         self.__IdCurso = IdCurso
