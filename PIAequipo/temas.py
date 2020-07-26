@@ -78,7 +78,10 @@ class Tema:
                 print("Saliendo del programa. ")
                 break
 
-           
+            else:
+                print("""
+                Error.
+                Favor de introducir solo numeros de las opciones. """)
 
 
 
