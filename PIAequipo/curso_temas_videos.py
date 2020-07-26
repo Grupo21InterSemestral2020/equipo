@@ -74,7 +74,25 @@ class Curso_tema_video:
                                 lista.remove(Curso_Tema_Video(clave,None,None))
                                 input("Registro borrado, enter para continuar...")
                                 print("")
-                                
+
+
+                elif opcion ==3:
+                    print("")
+                    print(f"\n{'idCursoTV':<30}{'idCT':<30}{'idVideo':<30}")
+                    for i2 in lista:
+                        print(f"{i2.icttv:<30}{i2.ict:<30}{i2.iv:<30}")
+                    clave=int(input("Clave:"))
+                    if lista==[]:
+                        input("Registro vacio actualmente, enter para continuar...")
+                        print("")
+                    else:
+                        for remover in lista:
+                            if remover.icttv==clave:
+                                remover.ict=int(input("Dame el idCT nuevo: "))
+                                remover.iv=int(input("Dame el idvideo nuevo: "))
+                                input("Registro Actualizado, enter para continuar...")
+                            print("")
+
 
 
             except ValueError:
