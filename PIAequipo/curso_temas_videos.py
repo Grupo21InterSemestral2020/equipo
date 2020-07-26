@@ -93,6 +93,8 @@ class Curso_tema_video:
                                 input("Registro Actualizado, enter para continuar...")
                             print("")
 
+                elif opcion ==4:
+
 
 
             except ValueError:
