@@ -59,6 +59,24 @@ class Curso_tema_video:
                     input("Registro Agregado, enter para continuar...")
                     print(" ")
 
+                elif opcion ==2:
+                    print("")
+                    print(f"\n{'idCursoTV':<30}{'idCT':<30}{'idVideo':<30}")
+                    for i1 in lista:
+                        print(f"{i1.icttv:<30}{i1.ict:<30}{i1.iv:<30}")
+                    if lista==[]:
+                        input("Actualmente vacia, enter para continuar...")
+                        print("")
+                    else:
+                        clave=int(input("Clave:"))
+                        for remover in lista:
+                            if remover.icttv == clave:
+                                lista.remove(Curso_Tema_Video(clave,None,None))
+                                input("Registro borrado, enter para continuar...")
+                                print("")
+                                
+
+
             except ValueError:
                     print(" ")
                     input("Error, introducir solo numeros, vuelva a intentar, enter para continuar...")
