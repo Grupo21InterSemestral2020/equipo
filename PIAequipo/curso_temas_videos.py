@@ -31,7 +31,6 @@ class Curso_tema_video:
     def __eq__(self,otro):
         return self.__IdCursoTV == otro.__IdCursoTV
     def minimenu(self):
-        
         lista = []
 
         while True:
