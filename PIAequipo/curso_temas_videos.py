@@ -53,7 +53,7 @@ class Curso_tema_video:
                     videoid.close()
                     self.__iv=int(input("Dame el idvideo: "))
                     self.__icttv=self.__icttv+1
-                    valores=Curso_Tema_Video(self.__icttv,self.__ict,self.__iv)
+                    valores=Curso_tema_video(self.__icttv,self.__ict,self.__iv)
                     lista.append(valores)
                     input("Registro Agregado, enter para continuar...")
                     print(" ")
@@ -70,7 +70,7 @@ class Curso_tema_video:
                         clave=int(input("Clave:"))
                         for remover in lista:
                             if remover.icttv == clave:
-                                lista.remove(Curso_Tema_Video(clave,None,None))
+                                lista.remove(Curso_tema_video(clave,None,None))
                                 input("Registro borrado, enter para continuar...")
                                 print("")
 
