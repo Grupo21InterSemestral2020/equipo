@@ -33,7 +33,7 @@ while True:
 
         elif opcion == 4:
             valor=Video(0,0,0,0)
-            valor.minimenu()
+            valor.Minimenu()
 
         elif opcion == 5:
             valor=Curso_Tema(0,0,0)
@@ -44,7 +44,8 @@ while True:
             valor.minimenu()    
 
         elif opcion == 7:
-            break print("saliendo")
+            print("saliendo")
+            break
 
     except ValueError:
         print("Error, introducir unicamente numero")
