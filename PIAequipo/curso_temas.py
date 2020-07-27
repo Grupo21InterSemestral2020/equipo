@@ -33,6 +33,7 @@ class Curso_Tema:
         self.__idct=valor    
 
     def menu(self):
+        limpiar_pantalla()
         lista=[]
         while True:
             try:
@@ -46,9 +47,11 @@ class Curso_Tema:
                 6)Salir
                 >>Opcion:'''))
                 if opcion<1:
+                    limpiar_pantalla()
                     input("Error, introduzca opcion valida")
 
                 elif opcion==1:
+                    limpiar_pantalla
                     curso=open("./archivos/curso.txt","r")
                     print(curso.read())
                     input("Base de Datos Actual")
@@ -59,30 +62,38 @@ class Curso_Tema:
                     input("Base de Datos Actual")
                     tema.close()
                     self.__idt=int(input("Ingresa id del tema: "))
+                    limpiar_pantalla()
                     self.__icdt=self.__idct+1
                     valores=Curso_Tema(self.__idct,self.__idc,self.__idt)
                     lista.append(valores)
-                    print("Empleado Agregado")
+                    input("Empleado Agregado")
+                    limpiar_pantalla()
 
                 elif opcion==2:
+                    limpiar_pantalla()
                     print(f"\n{'idCursoTema':<30}{'idCurso':<30}{'idTema':<30}")
                     for i1 in lista:
                         print(f"{i1.idct:<30}{i1.idc:<30}{i1.idt:<30}")
                     if lista==[]:
                         input("Registro vacio")
+                        limpiar_pantalla()
                     else:
-                        clave=int(input("Clave:"))
+                        clave=int(input("Ingresa clave:"))
                     for remover in lista:
                         if remover.idct == clave:
                             lista.remove(Curso_Tema(clave,None,None))
                             input("Registro borrado")
+                            limpiar_pantalla
+                
                 elif opcion==3:
+                    limpiar_pantalla()
                     print(f"\n{'idCursoTema':<30}{'idCurso':<30}{'idTema':<30}")
                     for i2 in lista:
                         print(f"{i2.idct:<30}{i2.idc:<30}{i2.idt:<30}")
                     clave=int(input("Ingresa la clave:"))
                     if lista==[]:
                         print("Registro vacio")
+                        limpiar_pantalla()
                     else:
                         for remover in lista:
                             if remover.ict==clave:
@@ -90,18 +101,23 @@ class Curso_Tema:
                                 remover.it=int(input("Ingresa el tema nuevo: "))
                                 input("Registro Actualizado")
                 elif opcion==4:
+                    limpiar_pantalla()
                     if lista==[]:
                         input("Registro vacio")
+                        limpiar_pantalla()
                     else:
                         print(f"\n{'idCursoTema':<30}{'idCurso':<30}{'idTema':<30}")
                         for i3 in lista:
                             print(f"{i3.idct:<30}{i3.idc:<30}{i3.idt:<30}")
+                            limpiar_pantalla()
                 
                 elif opcion==5:
+                    limpiar_pantalla()
                     print(f"\n{'idCursoTema':<30}{'idCurso':<30}{'idTema':<30}")
                     for i4 in lista:
                         print(f"{i4.idct:<30}{i4.idc:<30}{i4.idt:<30}")
                     clave=int(input("Ingrese clave:"))
+                    limpiar_pantalla()
                     print(f"\n{'idCursoTema':<30}{'idCurso':<30}{'idTema':<30}")
                     for i5 in lista:
                         if i5.idct==clave:
@@ -111,6 +127,8 @@ class Curso_Tema:
                     break
                 elif opcion>6:
                     input("Error, introduzca opcion valida")
+                    limpiar_pantalla()
+                
                 def informacion():
                     archivo=open("./archivos/Curso_Temas.txt","w",encoding='utf8')
                     for i6 in lista:
