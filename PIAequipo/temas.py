@@ -50,6 +50,7 @@ class Tema:
                 self.__nombre=input("Nombre del tema: ")
                 info= Tema(self.__idTema,self.__nombre)
                 tema.append(info)
+                print("Tema agregado")
                 limpiar_pantalla()
 
             elif opc == 2:
@@ -110,7 +111,7 @@ class Tema:
 
 
             def guardar():
-                f = open("./archivos/temas.txt","w")
+                f = open(".temas.txt","w")
                 for posicion in tema:
                     f.write(str(f" ID TEMA: {posicion.idTema}, NOMBRE: {posicion.nombre}"))
                     f.close()
