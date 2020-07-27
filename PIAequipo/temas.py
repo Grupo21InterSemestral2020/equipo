@@ -1,10 +1,3 @@
-from os import system,name
-def limpiar_pantalla():
-    if name == "nt":
-        system("cls")
-    else:
-        system("clear")
-
 class Tema:
     def __init__(self,idTema,nombre):
         self.__idTema = idTema
@@ -27,7 +20,7 @@ class Tema:
         self.__nombre = nombre
 
     def menu(self):
-        limpiar_pantalla()
+
         tema = []
         while True:
             print(f"{'BIENVENIDO AL MENU DE TEMAS.': <20}")
@@ -40,79 +33,59 @@ class Tema:
             6.- Salir.""")
 
             opc= int(input("Elija una opcion: "))
-            if opc < 1:
-                limpiar_pantalla()
-                input("Introduzca un numero del menu.")
-
             if opc == 1:
-                limpiar_pantalla()
                 self.__idTema= self.__idTema+1
                 self.__nombre=input("Nombre del tema: ")
                 info= Tema(self.__idTema,self.__nombre)
                 tema.append(info)
-                limpiar_pantalla()
+                print("Tema agregado.")
 
             elif opc == 2:
-                limpiar_pantalla()
                 if tema == []:
                     input("No hay información.")
-                    limpiar_pantalla()
                 else: 
-                    id = int(input("ID del tema: "))
+                    clave = int(input("ID del tema a borrar: "))
                     for remover in tema:
-                        if remover.idTema == id:
-                            tema.remove(Tema(id,None))
+                        if remover.idTema == clave:
+                            tema.remove(Tema(clave,None))
                             input("El registro fue borrado. ")
-                            limpiar_pantalla()
 
             elif opc == 3:
-                limpiar_pantalla()
-                id = int(input("ID: "))
-                if tema == []:
-                    print("No hay información.")
-                    limpiar_pantalla()
-                else:
-                    for remover in tema:
-                        if remover.idTema == id:
-                            remover.nombre = input ("Nombre nuevo del tema: ")
-                            print("Registro actualizado.")
-                            limpiar_pantalla()
-
-            elif opc == 4:
-                limpiar_pantalla()
-                id = int(input("ID: "))
+                clave = int(input("ID: "))
                 if tema == []:
                     input("No hay información.")
-                    limpiar_pantalla()
                 else:
-                    print(f"{'idTema': <20} {'Nombre' :<20}")
-                    limpiar_pantalla()
+                    for remover in tema:
+                        if remover.idTema == clave:
+                            remover.nombre = input ("Nombre nuevo del tema: ")
+                            input("Registro actualizado.")
+
+            elif opc == 4:
+                clave = int(input("ID: "))
+                if tema == []:
+                    input("No hay información.")
+                else:
+                    input(f"{'idTema': <20} {'Nombre' :<20}")
 
             elif opc == 5:
-                limpiar_pantalla()
                 if tema ==[]:
-                    print("No hay informacion. ")
-                    limpiar_pantalla()
+                    input("Registro vacio actualmente")
                 else:
-                    for element in tema:
-                        print (element)
-                        limpiar_pantalla()
+                    print(f"{'idTema':<20}{'nombre':<20}")
+
+                    for posicion in tema:
+                        print(f"{posicion.idTema:<20}{posicion.nombre:<20}")
             
             elif opc == 6:
-                print("Saliendo del programa. ")
                 break
 
-            else:
-                print("""
-                Error.
-                Favor de introducir solo numeros de las opciones. """)
-                limpiar_pantalla()
-
+            elif opc > 6:
+                input("""Error. Favor de introducir solo numeros de las opciones. """)
 
             def guardar():
-                f = open("./archivos/temas.txt","w")
+                archivo = open("./archivos/temas.txt","w", encoding='utf8')
                 for posicion in tema:
-                    f.write(str(f" ID TEMA: {posicion.idTema}, NOMBRE: {posicion.nombre}"))
-                    f.close()
+                    archivo.write(str(f" idTema: {posicion.idTema}, nombre: {posicion.nombre}"))
+                    archivo.close()
             guardar()
 
