@@ -65,7 +65,7 @@ class Tema:
                 if tema == []:
                     input("No hay información.")
                 else:
-                    input(f"{'idTema': <20} {'Nombre' :<20}")
+                    input(f"{self.__idTema: <20}{self.__nombre :<20}")
 
             elif opc == 5:
                 if tema ==[]:
