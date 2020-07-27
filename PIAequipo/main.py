@@ -38,7 +38,7 @@ while True:
         valor.Minimenu()
     elif opcion==5:
         valor=Curso_Tema(0,0,0)
-        valor.menu()
+        valor.Minimenu()
     elif opcion==6:
         valor=Curso_tema_video(0,0,0)
         valor.minimenu()
