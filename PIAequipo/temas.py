@@ -38,8 +38,3 @@ class Tema:
                 f.close()
                 print("Tema agregado.")
 
-
-
-
-valor = Tema(1,None)
-valor.opciones()
