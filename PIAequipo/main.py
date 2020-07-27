@@ -44,7 +44,8 @@ while True:
             valor.minimenu()    
 
         elif opcion == 7:
-            break print("saliendo")
+         print("saliendo")
+        break
 
     except ValueError:
         print("Error, introducir unicamente numero")
