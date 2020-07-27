@@ -38,12 +38,7 @@ class Tema:
                 self.__nombre=input("Nombre del tema: ")
                 info= Tema(self.__idTema,self.__nombre)
                 tema.append(info)
-<<<<<<< HEAD
                 print("Tema agregado.")
-=======
-                print("Tema agregado")
-                limpiar_pantalla()
->>>>>>> 0a277c18c3fc4260b78bbd0acdf4c19bfc9220a8
 
             elif opc == 2:
                 if tema == []:
