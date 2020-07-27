@@ -49,9 +49,3 @@ while True:
 
     except ValueError:
         print("Error, introducir unicamente numero")
-
-            
-        
-           
-
-        
