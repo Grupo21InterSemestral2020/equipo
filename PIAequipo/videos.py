@@ -19,6 +19,10 @@ class Video:
     @property
     def url(self):
         return self.__url
+        
+    @url.setter
+    def url(self,valor):
+        self.__url=valor
 
     @property
     def nom(self):
