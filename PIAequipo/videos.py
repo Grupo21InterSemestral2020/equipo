@@ -1,3 +1,10 @@
+from os import system,name
+def limpiar_pantalla():
+    if name=='nt':
+        system('cls')
+    else:
+        system('clear')
+
 class Video:
     def __init__ (self,idVideo,nombre,url,fecha):
         self.__idV = idVideo
@@ -12,6 +19,10 @@ class Video:
     @property
     def url(self):
         return self.__url
+        
+    @url.setter
+    def url(self,valor):
+        self.__url=valor
 
     @property
     def nom(self):
@@ -28,8 +39,6 @@ class Video:
     @fechap.setter
     def fechap(self,valor):
         self.__fechap = valor
-
-
     def __eq__ (self,otro):
         return self.__idV==otro.__idV
 
@@ -86,32 +95,42 @@ class Video:
                             input("El registro actualizado, enter para continuar...")
  
                 elif opcion==4:
+                    limpiar_pantalla()
                     if lista==[]:
                         input("Registro vacio actualmente, enter para continuar...")
+                        limpiar_pantalla()
                     else:
                         print(f"\n{'idVideo':<30}{'nombre':<30}{'url':<30}{'fecha':<30}")
                         for i3 in lista:
                             print(f"{i3.idV:<30}{i3.nom:<30}{i3.url:<30}{i3.fechap:<30}")
+                        input("Presione enter para continuar...")
+                        limpiar_pantalla()
 
                 elif opcion==5:
+                    limpiar_pantalla()
                     print(f"\n{'idVideo':<30}{'nombre':<30}{'url':<30}{'fecha':<30}")
                     for i4 in lista:
                         print(f"{i4.idV:<30}{i4.nom:<30}{i4.url:<30}{i4.fechap:<30}")
-                        clave=int(input("Clave:"))
-                        print(f"\n{'idVideo':<30}{'nombre':<30}{'url':<30}{'fecha':<30}")
+                    clave=int(input("Clave:"))
+                    limpiar_pantalla()
+                    print(f"\n{'idVideo':<30}{'nombre':<30}{'url':<30}{'fecha':<30}")
                     for i5 in lista:
                         if i5.icttv==clave:
                             print(f"{i5.idV:<30}{i5.nom:<30}{i5.url:<30}{i5.fechap:<30}")
+                    input("Presiona enter para continuar...")
                 elif opcion==6:
                     break
-                elif opcion>6:
+                else:
                     input("Introduce un numero valido")
+                    limpiar_pantalla()
 
                 def informacion():
-                    archivo=open("./archivos/videos.txt","w")
+                    archivo=open(".videos.txt","w")
                     for i6 in lista:
                         archivo.write(str(f" idVideo: {i6.idV}, nombre: {i6.nom}, url: {i6.url}, fecha: {i6.fechap}""\n"))
                     archivo.close()
                 informacion()
+                limpiar_pantalla()
+            
             except ValueError:
                 input("Se produjo un error, vuelve a intentar")
