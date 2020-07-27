@@ -85,7 +85,7 @@ class Tema:
             def guardar():
                 archivo = open(".temas.txt","w", encoding='utf8')
                 for posicion in tema:
-                    archivo.write(str(f" idTema: {posicion.idTema}, nombre: {posicion.nombre}"))
-                    archivo.close()
+                    archivo.write(str(f" idTema: {posicion.idTema}, nombre: {posicion.nombre}" "\n"))
+                archivo.close()
             guardar()
 
