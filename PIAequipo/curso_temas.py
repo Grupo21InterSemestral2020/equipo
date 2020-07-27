@@ -106,7 +106,7 @@ class Curso_Tema:
                 elif opcion>6:
                     input("Error, introduzca opcion valida")
                 def informacion():
-                    archivo=open("./archivos/Curso_Tema.txt","w",encoding='utf8')
+                    archivo=open("./archivos/Curso_Temas.txt","w",encoding='utf8')
                     for i6 in lista:
                         archivo.write(str(f" IdCursoTema: {i6.idct}, IdCurso: {i6.idc}, IdTema: {i6.idt}""\n"))
                     archivo.close()

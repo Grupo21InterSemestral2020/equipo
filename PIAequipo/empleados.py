@@ -74,12 +74,12 @@ class Empleado():
                             input("Registro actualizado correctamente.")
 
             elif opcion == 4:
-                print("Ingresa el Id del empleado que desea consultar: ")
-                archivo = open("../PIAequipo/empleados.txt","r",encoding="utf8")
-                lines = archivo.readlines()
-                for line in lines:
-                    print (line)
-                archivo.close()
+                if empleados ==[]:
+                    print("No hay informacion. ")
+                else:
+                    archivo=open("./archivos/empleados.txt","w",encoding='utf8')
+                    contenido = archivo.read()
+                    print(contenido)
 
             elif opcion == 5:
                 if empleados==[]:
