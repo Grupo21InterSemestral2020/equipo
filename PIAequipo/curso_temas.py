@@ -6,93 +6,77 @@ def limpiar_pantalla():
         system('clear')
 class Curso_Tema:
     def __init__(self, idCursoTema,idCurso,idTema):
-        self.__idct=idCursoTema
-        self.__idc=idCurso
-        self.__idt=idTema
+        self.__ict=idCursoTema
+        self.__ic=idCurso
+        self.__it=idTema
     @property
-    def idct(self):
-        return self.__idct
+    def ict(self):
+        return self.__ict
     @property
-    def idc(self):
-        return self.__idc
-
+    def ic(self):
+        return self.__ic
+    @ic.setter
+    def ic(self,valor):
+        self.__ic=valor
     @property
-    def idt(self):
-        return self.__idt
-
-    @idc.setter
-    def idc(self,valor):
-        self.__idc=valor
-    
-    @idt.setter
-    def idt(self,valor):
-        self.__idt=valor
-
-    @idct.setter
-    def idct(self,valor):
-        self.__idct=valor    
-
-    def menu(self):
+    def it(self):
+        return self.__it
+    @it.setter
+    def it(self,valor):
+        self.__it=valor
+    def __eq__(self,otro):
+        return self.__ict == otro.__ict
+    def Minimenu(self):
         limpiar_pantalla()
         lista=[]
         while True:
             try:
-                opcion=int(input('''
-                CURSO TEMAS :Elija la opcion que desea
-                1)Agregar
-                2)Borrar
-                3)Modificar
-                4)Consultar todo
-                5)Ver detalles
-                6)Salir
-                >>Opcion:'''))
+                opcion=int(input("¿Qué Desea hacer?\n1)Agregar\n2)Borrar\n3)Modificar\n4)Consultar\n5)Elegir Clave\n6)Salir\nOpcion:"))
                 if opcion<1:
                     limpiar_pantalla()
-                    input("Error, introduzca opcion valida")
-
+                    input("Error, introduzca numero correcto")
                 elif opcion==1:
-                    limpiar_pantalla
-                    curso=open("./archivos/curso.txt","r")
+                    limpiar_pantalla()
+                    curso=open("curso.txt","r")
                     print(curso.read())
                     input("Base de Datos Actual")
                     curso.close()
-                    self.__idc=int(input("Ingresa id del curso: "))
-                    tema=open("./archivos/Tema.txt","r")
+                    self.__ic=int(input("Introduce id del curso: "))
+                    limpiar_pantalla()
+                    tema=open("temas.txt","r")
                     print(tema.read())
                     input("Base de Datos Actual")
                     tema.close()
-                    self.__idt=int(input("Ingresa id del tema: "))
+                    self.__it=int(input("Dame el tema: "))
                     limpiar_pantalla()
-                    self.__icdt=self.__idct+1
-                    valores=Curso_Tema(self.__idct,self.__idc,self.__idt)
+                    self.__ict=self.__ict+1
+                    valores=Curso_Tema(self.__ict,self.__ic,self.__it)
                     lista.append(valores)
-                    input("Empleado Agregado")
+                    input("Registro Agregado")
                     limpiar_pantalla()
-
                 elif opcion==2:
                     limpiar_pantalla()
                     print(f"\n{'idCursoTema':<30}{'idCurso':<30}{'idTema':<30}")
                     for i1 in lista:
-                        print(f"{i1.idct:<30}{i1.idc:<30}{i1.idt:<30}")
+                        print(f"{i1.ict:<30}{i1.ic:<30}{i1.it:<30}")
                     if lista==[]:
-                        input("Registro vacio")
+                        input("Actualmente vacia")
                         limpiar_pantalla()
                     else:
-                        clave=int(input("Ingresa clave:"))
-                    for remover in lista:
-                        if remover.idct == clave:
-                            lista.remove(Curso_Tema(clave,None,None))
-                            input("Registro borrado")
-                            limpiar_pantalla
-                
+                        clave=int(input("Introduce clave:"))
+                        for remover in lista:
+                            if remover.ict == clave:
+                                lista.remove(Curso_Tema(clave,None,None))
+                                input("Registro borrado")
+                                limpiar_pantalla()
                 elif opcion==3:
                     limpiar_pantalla()
                     print(f"\n{'idCursoTema':<30}{'idCurso':<30}{'idTema':<30}")
                     for i2 in lista:
-                        print(f"{i2.idct:<30}{i2.idc:<30}{i2.idt:<30}")
-                    clave=int(input("Ingresa la clave:"))
+                        print(f"{i2.ict:<30}{i2.ic:<30}{i2.it:<30}")
+                    clave=int(input("Clave:"))
                     if lista==[]:
-                        print("Registro vacio")
+                        input("Registro vacio actualmente, enter para continuar...")
                         limpiar_pantalla()
                     else:
                         for remover in lista:
@@ -100,41 +84,41 @@ class Curso_Tema:
                                 remover.ic=int(input("Ingresa el curso nuevo: "))
                                 remover.it=int(input("Ingresa el tema nuevo: "))
                                 input("Registro Actualizado")
+                            limpiar_pantalla()
                 elif opcion==4:
                     limpiar_pantalla()
                     if lista==[]:
-                        input("Registro vacio")
+                        input("Registro vacio actualmente")
                         limpiar_pantalla()
                     else:
                         print(f"\n{'idCursoTema':<30}{'idCurso':<30}{'idTema':<30}")
                         for i3 in lista:
-                            print(f"{i3.idct:<30}{i3.idc:<30}{i3.idt:<30}")
-                            limpiar_pantalla()
-                
+                            print(f"{i3.ict:<30}{i3.ic:<30}{i3.it:<30}")
+                        input("Enter para continuar...")
+                        limpiar_pantalla()
                 elif opcion==5:
                     limpiar_pantalla()
                     print(f"\n{'idCursoTema':<30}{'idCurso':<30}{'idTema':<30}")
                     for i4 in lista:
-                        print(f"{i4.idct:<30}{i4.idc:<30}{i4.idt:<30}")
-                    clave=int(input("Ingrese clave:"))
+                        print(f"{i4.ict:<30}{i4.ic:<30}{i4.it:<30}")
+                    clave=int(input("Clave:"))
                     limpiar_pantalla()
                     print(f"\n{'idCursoTema':<30}{'idCurso':<30}{'idTema':<30}")
                     for i5 in lista:
-                        if i5.idct==clave:
-                            print(f"{i5.idct:<30}{i5.idc:<30}{i5.idt:<30}")
-
+                        if i5.ict==clave:
+                            print(f"{i5.ict:<30}{i5.ic:<30}{i5.it:<30}")
+                    input("Enter para continuar...")
                 elif opcion==6:
                     break
                 elif opcion>6:
                     input("Error, introduzca opcion valida")
                     limpiar_pantalla()
-                
                 def informacion():
-                    archivo=open("./archivos/Curso_Temas.txt","w",encoding='utf8')
+                    archivo=open("Curso_Tema.txt","w")
                     for i6 in lista:
-                        archivo.write(str(f" IdCursoTema: {i6.idct}, IdCurso: {i6.idc}, IdTema: {i6.idt}""\n"))
+                        archivo.write(str(f" IdCursoTema: {i6.ict}, IdCurso: {i6.ic}, IdTema: {i6.it}""\n"))
                     archivo.close()
                 informacion()
             except ValueError:
-                input("Error, introduzca solo numero de opcion valida del menu")
- 
+                limpiar_pantalla()
+                input("Error, introducir unicamente numero, vuelva a intentar")
