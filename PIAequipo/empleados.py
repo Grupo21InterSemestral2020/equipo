@@ -35,12 +35,12 @@ class Empleado():
         while True:
             print(f"{'BIENVENIDO AL MENU EMPLEADOS':^20}")
             print ("""
-            1. Agregar empleado
-            2. Borrar empleado
-            3. Modificar empleado
-            4. Consultar todo. 
-            5. Ver detalles de empleado
-            6. Salir""")
+            1. Agregar empleado.
+            2. Borrar empleado.
+            3. Modificar empleado.
+            4. Ver detalles de empleado.  
+            5. Consultar todo. 
+            6. Salir.""")
 
             opcion= int(input("Elija una opcion: "))
             if opcion ==1:
