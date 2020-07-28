@@ -23,7 +23,8 @@ class Tema:
 
         tema = []
         while True:
-            print(f"{'BIENVENIDO AL MENU DE TEMAS.': <20}")
+            print(f"""
+            BIENVENIDOS AL MENU DE TEMAS""")
             print ("""
             1.- Agregar tema.
             2.- Borrar tema.
@@ -46,7 +47,7 @@ class Tema:
                 else: 
                     clave = int(input("ID del tema a borrar: "))
                     for remover in tema:
-                        if remover.idTema == clave:
+                        if remover.__idTema == clave:
                             tema.remove(Tema(clave,None))
                             input("El registro fue borrado. ")
 
@@ -67,6 +68,7 @@ class Tema:
                 else:
                     input(f"{self.__idTema: <20}{self.__nombre :<20}")
 
+            
             elif opc == 5:
                 if tema ==[]:
                     input("Registro vacio actualmente")
