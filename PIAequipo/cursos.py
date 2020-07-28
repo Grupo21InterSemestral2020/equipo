@@ -49,6 +49,7 @@ class Cursos:
         while True:
             try:
                 opcion = int(input('''
+                BIENVENIDOS AL MENU DE CURSOS
                 ¿Que desea hacer en este apartado?:
                 1)Agregar
                 2)Borrar
@@ -59,7 +60,7 @@ class Cursos:
                 >>> Seleccione opcion:'''))
                 if opcion < 1:
                    limpiar_pantalla()
-                   input("Por favor introduzca numero correcto...")
+                   input("Por favor introduzca numero correcto.")
                     
 
                 elif opcion == 1:

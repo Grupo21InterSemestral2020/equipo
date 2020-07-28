@@ -33,14 +33,16 @@ class Empleado():
 
         empleados = []
         while True:
-            print(f"{'BIENVENIDO AL MENU EMPLEADOS':^20}")
+            print(f"""
+            BIENVENIDO AL MENU EMPLEADOS.
+            """)
             print ("""
             1. Agregar empleado.
             2. Borrar empleado.
             3. Modificar empleado.
             4. Ver detalles de empleado.  
             5. Consultar todo. 
-            6. Salir.""")
+            6. Regresar al menu principal.""")
 
             opcion= int(input("Elija una opcion: "))
             if opcion ==1:
@@ -59,19 +61,19 @@ class Empleado():
                     for remover in empleados:
                         if remover.idEmpleado == clave:
                             empleados.remove(Empleado(clave,None,None))
-                            input("Registro borrado")
+                            input("Empleado borrado. Presione Enter.")
             
             elif opcion ==3:
                 clave = int(input("Introduce la clave: "))
                 if empleados ==[]:
-                    input("Actualmente vacia")
+                    input("Archivo actualmente vacio. ")
                 
                 else:
                     for remover in empleados:
                         if remover.idEmpleado == clave:
                             remover.nombre = input("Ingrese nuevo nombre: ")
                             remover.direccion = input("Ingrese nueva direccion: ")
-                            input("Registro actualizado correctamente.")
+                            input("Registro actualizado.")
 
             elif opcion == 4:
                 print("Ingresa el Id del empleado que desea consultar: ")
