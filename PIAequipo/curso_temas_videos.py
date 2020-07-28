@@ -42,7 +42,9 @@ class Curso_tema_video:
 
         while True:
             try:
-                opcion=int(input("""¿Qué Desea hacer?
+                print("BIENVENIDO A MENU CURSO-TEMA-VIDEO")
+                opcion=int(input("""
+                ¿Qué Desea hacer?
                 1)Agregar
                 2)Borrar
                 3)Modificar
