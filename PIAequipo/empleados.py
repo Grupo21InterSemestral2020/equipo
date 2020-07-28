@@ -77,7 +77,7 @@ class Empleado():
 
             elif opcion == 4:
                 print("Ingresa el Id del empleado que desea consultar: ")
-                archivo = open("../PIAequipo/empleados.txt","r",encoding="utf8")
+                archivo = open("empleados.txt","r",encoding="utf8")
                 lines = archivo.readlines()
                 for line in lines:
                     print (line)
@@ -99,7 +99,7 @@ class Empleado():
                 input("Error, introduzca numero del minimenu")
 
             def guardado():
-                archivo=open(".empleados.txt","w",encoding='utf8')
+                archivo=open("empleados.txt","w",encoding='utf8')
                 for posicion in empleados:
                     archivo.write(str(f" idEmpleado: {posicion.idEmpleado}, nombre: {posicion.nombre}, direccion: {posicion.direccion} ""\n"))
                 archivo.close()
