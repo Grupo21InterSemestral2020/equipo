@@ -31,7 +31,16 @@ class Curso_Tema:
         lista=[]
         while True:
             try:
-                opcion=int(input("¿Qué Desea hacer?\n1)Agregar\n2)Borrar\n3)Modificar\n4)Consultar\n5)Elegir Clave\n6)Salir\nOpcion:"))
+                print("BIENVENIDO A MENU CURSO-TEMA")
+                opcion=int(input('''
+                ¿Qué Desea hacer?
+                1)Agregar
+                2)Borrar
+                3)Modificar
+                4)Consultar todo
+                5)Ver detalles de registro
+                6)Salir
+                >>Opcion:'''))
                 if opcion<1:
                     limpiar_pantalla()
                     input("Error, introduzca numero correcto")
@@ -52,7 +61,7 @@ class Curso_Tema:
                     self.__ict=self.__ict+1
                     valores=Curso_Tema(self.__ict,self.__ic,self.__it)
                     lista.append(valores)
-                    input("Registro Agregado")
+                    input(f'{"Registro Agregado":.^30}')
                     limpiar_pantalla()
                 elif opcion==2:
                     limpiar_pantalla()
@@ -67,7 +76,7 @@ class Curso_Tema:
                         for remover in lista:
                             if remover.ict == clave:
                                 lista.remove(Curso_Tema(clave,None,None))
-                                input("Registro borrado")
+                                input(f'{"Registro borrado":.^30}')
                                 limpiar_pantalla()
                 elif opcion==3:
                     limpiar_pantalla()
@@ -83,7 +92,7 @@ class Curso_Tema:
                             if remover.ict==clave:
                                 remover.ic=int(input("Ingresa el curso nuevo: "))
                                 remover.it=int(input("Ingresa el tema nuevo: "))
-                                input("Registro Actualizado")
+                                input(f'{"Registro Actualizado":^30}')
                             limpiar_pantalla()
                 elif opcion==4:
                     limpiar_pantalla()
