@@ -63,17 +63,15 @@ class Curso_tema_video:
                 elif opcion ==2:
                     print(f"\n{'idCursoTV':<30}{'idCT':<30}{'idVideo':<30}")
                     for i1 in lista:
-                        print(f"{i1.icttv:<30}{i1.ict:<30}{i1.iv:<30}")
+                        print(f"{i1.__idCursoTV:<30}{i1.IdCT:<30}{i1.IdVideo:<30}")
                     if lista==[]:
-                        input("Actualmente vacia, enter para continuar...")
-                        print("")
+                        input("Actualmente vacia.")
                     else:
                         clave=int(input("Clave:"))
                         for remover in lista:
-                            if remover.icttv == clave:
+                            if remover.IdCursoTV == clave:
                                 lista.remove(Curso_tema_video(clave,None,None))
-                                input("Registro borrado, enter para continuar...")
-                                print("")
+                                input("Registro borrado.")
 
 
                 elif opcion ==3:
