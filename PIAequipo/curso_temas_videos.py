@@ -46,12 +46,12 @@ class Curso_tema_video:
                 if opcion<1:
                     input("Error, introduzca numero correcto.")
                 elif opcion==1:
-                    idctema=open("./archivos/curso_temas_videos.txt","r",encoding='utf8')
+                    idctema=open("curso_temas_videos.txt","r",encoding='utf8')
                     print(idctema.read())
                     input("Base de datos Actual.")
                     idctema.close()
                     self.__IdCT=int(input("Dame el idCursoTema: "))
-                    videoid=open("./archivos/VIDEO.txt","r", encoding='utf8')
+                    videoid=open("videos.txt","r", encoding='utf8')
                     print(videoid.read())
                     input("Base de datos Actual.")
                     videoid.close()
@@ -116,7 +116,7 @@ class Curso_tema_video:
                 elif opcion>6:
                     input("Error, introduzca numero correcto.")
                 def informacion():
-                    archivo=open("./archivos/curso_temas_videos.txt","w",encoding='utf8')
+                    archivo=open("curso_temas_videos.txt","w",encoding='utf8')
                     for i6 in lista:
                         archivo.write(str(f" IdCursoTV: {i6.__IdCursoTV}, IdCT: {i6.__IdCT}, IdVideo: {i6.__IdVideo}""\n"))
                     archivo.close()
