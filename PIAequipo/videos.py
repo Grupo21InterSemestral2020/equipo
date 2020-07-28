@@ -47,6 +47,7 @@ class Video:
         while True:
             try:
                 opcion=int(input('''
+                BIENVENIDO AL MENU DE VIDEO
                 Elige una opcion
                 1)Agregarvideo
                 2)Eliminarvideo
