@@ -35,31 +35,32 @@ class Curso_tema_video:
 
         while True:
             try:
-                opcion=int(input("¿Qué Desea hacer?\n1)Agregar\n2)Borrar\n3)Modificar\n4)Consultar\n5)Elegir Clave\n6)Salir\nOpcion:"))
+                opcion=int(input("""¿Qué Desea hacer?
+                1)Agregar
+                2)Borrar
+                3)Modificar
+                4)Consultar
+                5)Elegir Clave
+                6)Salir
+                Opcion: """))
                 if opcion<1:
-                    print(" ")
-                    input("Error, introduzca numero correcto, enter para continuar...")
+                    input("Error, introduzca numero correcto.")
                 elif opcion==1:
-                    print(" ")
-                    idctema=open("./archivos/Curso_Tema.txt","r")
+                    idctema=open("./archivos/curso_temas_videos.txt","r",encoding='utf8')
                     print(idctema.read())
-                    input("Base de datos Actual, enter para continuar...")
+                    input("Base de datos Actual.")
                     idctema.close()
-                    self.__ict=int(input("Dame el idCursoTema: "))
-                    print(" ")
-                    videoid=open("./archivos/VIDEO.txt","r")
+                    self.__IdCT=int(input("Dame el idCursoTema: "))
+                    videoid=open("./archivos/VIDEO.txt","r", encoding='utf8')
                     print(videoid.read())
-                    input("Base de datos Actual, enter para continuar...")
+                    input("Base de datos Actual.")
                     videoid.close()
-                    self.__iv=int(input("Dame el idvideo: "))
-                    self.__icttv=self.__icttv+1
-                    valores=Curso_tema_video(self.__icttv,self.__ict,self.__iv)
+                    self.__IdVideo=int(input("Dame el idvideo: "))
+                    self.__IdCursoTV=self.__IdCursoTV+1
+                    valores=Curso_tema_video(self.__IdCursoTV,self.__IdCT,self.__IdVideo)
                     lista.append(valores)
-                    input("Registro Agregado, enter para continuar...")
-                    print(" ")
-
+                    input("Registro Agregado")
                 elif opcion ==2:
-                    print("")
                     print(f"\n{'idCursoTV':<30}{'idCT':<30}{'idVideo':<30}")
                     for i1 in lista:
                         print(f"{i1.icttv:<30}{i1.ict:<30}{i1.iv:<30}")
