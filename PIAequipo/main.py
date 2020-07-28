@@ -16,6 +16,7 @@ while True:
     limpiar_pantalla()
     while True:
         try:
+            print(f'{"INICIO DE APLICACION":*^30}')
             opcion=int(input("¿Donde desea interactuar?\n1)Empleados\n2)Curso\n3)Temas\n4)Videos\n5)Temas Asignados\n6)VideosAsignados\n7)Salir\n >>Seleccione opcion: "))
             break
         except ValueError:
